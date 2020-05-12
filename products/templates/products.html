@@ -2,5 +2,17 @@
 {% block content %}
 
 <h1>Products</h1>
-
+<div class="products">
+    {% for product in products %}
+        <div class="product">
+            <a href="#">
+                <h2>{{ product.name}}</h2>
+                <div>{{ product.image }}</div>
+            </a>
+            <p>{{ product.price }}</p>
+            <p>{{ product.description }}</p>
+        </div>
+            
+    {% endfor %}
+</div>
 {% endblock %}
