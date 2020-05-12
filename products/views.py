@@ -1,6 +1,8 @@
 from django.shortcuts import render
+from .models import Product
 
 
-def all_products(request):
-    return render(request, 'products.html')
+def products_list(request):
+    products = Product.object.all().order_by('?', 'name')
+    return render(request, 'products.html', {'products':products})
 
