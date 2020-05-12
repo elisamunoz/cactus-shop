@@ -19,6 +19,7 @@ from .views import about, home
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^products/', include('products.urls')),
     url(r'^about/$', about),
     url(r'^$', home),
     url(r'^accounts/', include('accounts.urls')),
