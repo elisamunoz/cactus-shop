@@ -1,3 +1,4 @@
+{% load static from staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,7 +11,6 @@
     />
     <meta name="author" content="Elisa Munoz" />
     <title>Catcus</title>
-
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css"
@@ -19,6 +19,7 @@
       href="https://fonts.googleapis.com/css2?family=Lato&family=Sacramento&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
   </head>
   <body>
     <!-- Header -->
