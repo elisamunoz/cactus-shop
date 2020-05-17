@@ -3,8 +3,9 @@
 {% block content%}
 <!-- Sign up form -->
 <h1>Sign up</h1>
-<form action="{% url 'accounts:signup' %}" method="post" class="accountform"></form>
+<form action="{% url 'accounts:signup' %}" method="post" class="accountform">
+    {% csrf_token %}
     {{form}}
     <input type="submit" value="Sign up">
-
+</form>
 {% endblock %}
