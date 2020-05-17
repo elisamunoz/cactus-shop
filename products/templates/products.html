@@ -7,7 +7,7 @@
         <div class="product">
             <a href="{% url 'product_detail' product.id %}">
                 <h2>{{ product.name}}</h2>
-                <div>{{ product.image }}</div>
+                <img src="{{ product.image.url }}" alt="plant image">
             </a>
             <p>{{ product.price }}</p>
             <p>{{ product.snippet }}</p>

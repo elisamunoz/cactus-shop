@@ -4,7 +4,7 @@
 <h1>{{ product.name }}</h1>
 <div class="product__detail">
     {% if product.image %}
-        <img class="product__detail__img" src="../static/{{ product.image }}">
+        <img class="product__detail__img" src="{{ product.image.url }}">
     {% endif %}    
 
         <p>€{{ product.price }}</p>
