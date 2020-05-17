@@ -31,3 +31,8 @@ def login_view(request):
         form = AuthenticationForm()
     return render(request, "login.html", {'form': form})
 
+
+def logout_view(request):
+    auth.logout(request)
+    messages.success(request, 'You have successfully logged out!')
+    return redirect('products_list')
