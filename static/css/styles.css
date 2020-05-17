@@ -1,3 +1,6 @@
-body {
-    background-color: coral;
+/** General paddings, margins, styles **/
+*,
+a:hover {
+  text-decoration: none;
 }
+
