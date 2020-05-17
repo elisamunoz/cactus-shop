@@ -5,7 +5,7 @@ class Product(models.Model):
     name = models.CharField(max_length=100, default='')
     description = models.TextField()
     price = models.DecimalField(max_digits=4, decimal_places=2)
-    image = models.ImageField(upload_to='images')
+    image = models.ImageField(default='default.png', blank=True)
 
     object = models.Manager()
 
