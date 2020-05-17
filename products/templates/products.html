@@ -5,12 +5,15 @@
 <div class="products">
     {% for product in products %}
         <div class="product">
-            <a href="#">
+            <a href="{% url 'product_detail' product.id %}">
                 <h2>{{ product.name}}</h2>
                 <div>{{ product.image }}</div>
             </a>
             <p>{{ product.price }}</p>
             <p>{{ product.snippet }}</p>
+            <a href="{% url 'product_detail' product.id %}">
+                <button>Read More</button>
+            </a>
         </div>
             
     {% endfor %}
