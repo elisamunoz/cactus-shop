@@ -12,7 +12,10 @@ def signup_view(request):
             user = form.save()
             # log the user in
             login(request, user)
+            messages.success(request, "You have successfully signed up")
             return redirect("products_list")
+        else:
+            messages.error(request, "Sorry, unable to sign you up at this time")
     else:
         form = UserCreationForm()
     return render(request, 'signup.html', {'form': form})
@@ -26,7 +29,10 @@ def login_view(request):
             # log in the user
             user = form.get_user()
             login(request, user)
+            messages.success(request, "You have successfully logged in")
             return redirect("products_list")
+        else: 
+            messages.error(request, "User or password are incorrect")
     else:
         form = AuthenticationForm()
     return render(request, "login.html", {'form': form})
