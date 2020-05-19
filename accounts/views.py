@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login, logout
 from django.contrib import messages, auth
+from django.contrib.auth.decorators import login_required
 
 
 def signup_view(request):
@@ -30,7 +31,10 @@ def login_view(request):
             user = form.get_user()
             login(request, user)
             messages.success(request, "You have successfully logged in")
-            return redirect("products_list")
+            if 'next' in request.POST:
+                return redirect(request.POST.get('next'))
+            else:
+                return redirect("products_list")
         else: 
             messages.error(request, "User or password are incorrect")
     else:
@@ -39,6 +43,13 @@ def login_view(request):
 
 
 def logout_view(request):
+
     auth.logout(request)
     messages.success(request, 'You have successfully logged out!')
     return redirect('products_list')
+
+
+@login_required
+def profile_view(request):
+    """ View that displays the profile page of a logged in user"""
+    return render(request, 'profile.html')
