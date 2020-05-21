@@ -25,6 +25,7 @@ def product_create(request):
         form = CreateProduct(request.POST, request.FILES)
         if form.is_valid():
             # save article to db
+            form.save()
             return redirect('products_list')
     else:
         form = CreateProduct()
