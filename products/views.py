@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Product
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, user_passes_test
 from .forms import CreateProduct
 
 
@@ -19,14 +19,17 @@ def product_detail(request, pk):
     return render(request, "productdetail.html", {'product':product})
 
 
-@login_required(login_url="accounts/login")
+@user_passes_test(lambda u: u.is_superuser)
 def product_create(request):
     if request.method == 'POST':
         form = CreateProduct(request.POST, request.FILES)
         if form.is_valid():
             # save article to db
             form.save()
-            return redirect('products_list')
+            if 'next' in request.POST:
+                return redirect(request.POST.get('next'))
+            else:
+                return redirect("products_list")
     else:
         form = CreateProduct()
     return render(request, 'productcreate.html', {'form':form})
