@@ -1,11 +1,17 @@
 from django.db import models
 
 
+# LABEL_CHOICES = {
+#     ('NW', 'New'),
+#     ('OF', 'Offer')
+# }
+
 class Product(models.Model):
     name = models.CharField(max_length=100, default='')
     description = models.TextField()
     price = models.DecimalField(max_digits=4, decimal_places=2)
     image = models.ImageField(default='default.png', blank=True)
+    # label = models.CharField(choices=LABEL_CHOICES, max_length=2, default='', blank=True, null=True)
 
     object = models.Manager()
 
