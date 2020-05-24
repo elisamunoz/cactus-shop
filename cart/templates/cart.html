@@ -6,10 +6,15 @@
     {% for item in cart  %}
         {% for prod in item.products.all %}
             <tr>
-                <td>{{prod.name}}</td>
-                <td>{{prod.price}}</td>
+                <td>{{ prod.name }}</td>
+                <td>{{ prod.price }}</td>
             </tr>
+           
         {% endfor %}
+        <tr>
+            <td>Total: </td>
+            <td>{{ item.total }}</td>
+        </tr>
     {% endfor %}
 </table>
 

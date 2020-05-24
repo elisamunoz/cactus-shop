@@ -1,7 +1,6 @@
 from django.conf.urls import url, include
 from django.contrib import admin
 from .views import about, home
-from cart.views import cart_view
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf.urls.static import static
 from django.conf import settings
@@ -13,8 +12,7 @@ urlpatterns = [
     url(r'^about/$', about),
     url(r'^accounts/', include('accounts.urls')),
     url(r'^products/', include('products.urls')),
-    url(r'^cart/$', cart_view, name='cart'),
-    # url(r'^cart/', include('cart.urls')),
+    url(r'^cart/', include('cart.urls')),
 ]
 
 
