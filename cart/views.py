@@ -1,42 +1,43 @@
-from django.shortcuts import render, HttpResponseRedirect
-from django.core.urlresolvers import reverse
-from .models import Cart
-from products.models import Product
+from django.shortcuts import render, redirect, reverse
+from django.contrib.auth.decorators import login_required
+
 
 def view_cart(request):
-
-    """ This views allows to see the products in the shopping cart """
-    cart = Cart.objects.all()
-    return render(request, 'cart.html', {'cart':cart})
+    """ 
+    This view allows to see the products in the shopping cart 
+    """
+    return render(request, 'cart.html')
 
 
 @login_required
 def update_cart(request, id):
-    """ This views modify amount of products in the shopping cart """
-    cart = Cart.objects.all()
-    try:
-        print('cart')
-        print(cart.products)
-        product = Product.object.get(id=id)
-        a = cart.products.all()
-        print('ddd')
-        print(a)
-        if not product in cart.products.all():
-            print('hi')
-            #adds to the many to many field
-            cart.products.add(product)  
-        else:
-            print('no')
-            cart.products.remove(product)
-    except Product.DoesNotExist:
-        pass
-    except:
-        pass
-    # if not product in cart.products.all():
-    #     #adds to the many to many field
-    #     cart.products.add(product)  
-    # else:
-    #     cart.products.remove(product)
+    """ 
+    This view modify amount of products in the shopping cart 
+    """
+    quantity = int(request.POST.get('quantity'))
+    cart = request.session.get('cart', {})
 
-    return HttpResponseRedirect(reverse("cart"))
-    
+    if quantity > 0:
+        cart[id] = quantity
+    else:
+        cart.pop(id)
+
+    request.session['cart'] = cart
+    return redirect(reverse('cart'))
+
+
+@login_required
+def add_to_cart(request, id):
+    """ 
+    This view allows the user to add a certain amount of products
+    """
+    quantity = int(request.POST.get('quantity'))
+
+    cart = request.session.get('cart', {})
+    if id in cart:
+        cart[id] = int(cart[id] + quantity)
+    else:
+        cart[id] = cart.get(id, quantity)
+
+    request.session['cart'] = cart
+    return redirect(reverse('home'))

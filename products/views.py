@@ -8,7 +8,7 @@ def products_list(request):
     """ Creates a view that returns a products lists
     """
     products = Product.object.all().order_by('?', 'name')
-    return render(request, 'products.html', {'products':products})
+    return render(request, "products.html", {"products": products})
 
 
 def product_detail(request, pk):
@@ -16,7 +16,7 @@ def product_detail(request, pk):
     """
     product = get_object_or_404(Product, pk=pk )
     product.save()
-    return render(request, "productdetail.html", {'product':product})
+    return render(request, "productdetail.html", {"product": product})
 
 
 @user_passes_test(lambda u: u.is_superuser)
@@ -32,4 +32,4 @@ def product_create(request):
                 return redirect("products_list")
     else:
         form = CreateProduct()
-    return render(request, 'productcreate.html', {'form':form})
+    return render(request, "productcreate.html", {"form": form})
