@@ -2,7 +2,7 @@ from django.shortcuts import get_object_or_404
 from products.models import Product
 
 
-def cart_content(request):
+def cart_contents(request):
     """
     Makes the content of the cart available when rendering every page
     """
