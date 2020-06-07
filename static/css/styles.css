@@ -4,3 +4,30 @@ a:hover {
   text-decoration: none;
 }
 
+.site-content {
+  min-height: calc(100vh - 96px);
+}
+
+/* Carousel */
+.carousel.slide {
+  margin: auto;
+  width:100%;
+}
+
+.carousel-item {
+  height: 70vh;
+}
+
+.carousel__img {
+  width: 100%;
+}
+
+.carousel-caption h5 {
+  font-style: italic;
+}
+
+/* Footer */
+
+.social-links {
+  margin: auto;
+}
