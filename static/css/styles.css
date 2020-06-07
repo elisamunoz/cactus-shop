@@ -19,12 +19,14 @@ a:hover {
 }
 
 .carousel__img {
-  width: 100%;
+  height: 100%;
 }
 
 .carousel-caption h5 {
   font-style: italic;
 }
+
+
 
 /* Footer */
 
