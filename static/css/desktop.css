@@ -3,5 +3,12 @@
         width: 100%;
         height: auto;
     }
+    .card__img {
+        height: 380px;
+    }
 
+    .container {
+        max-width: 70%;
+        margin: auto;
+    }
 }
