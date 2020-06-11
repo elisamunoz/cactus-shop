@@ -1,11 +1,24 @@
 {% extends 'base.html' %}
 
 {% block content%}
-<!-- Sign up form -->
-<h1>Sign up</h1>
-<form action="{% url 'accounts:signup' %}" method="post" class="accountform">
-    {% csrf_token %}
-    {{form}}
-    <input type="submit" value="Sign up">
-</form>
+<div class="account">
+    <div class="account__title">
+      <div class="account__title__text">
+        <h1>My account</h1>
+        <h5>Where plants are our inspiration</h5>
+      </div>
+    </div>
+    
+    <!-- Sign up form -->
+    <div class="account__form">
+        <h1>Sign up</h1>
+        <form action="{% url 'accounts:signup' %}" method="post" class="">
+            {% csrf_token %}
+            {{form}}
+            <input type="submit" class="button" value="Sign up">
+        </form>
+    </div>
+    <div class="account__img background-image"></div>
+</div>
+
 {% endblock %}
