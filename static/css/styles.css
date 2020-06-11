@@ -13,6 +13,16 @@ html {
   min-height: calc(100vh - 96px);
 }
 
+.background-image {
+  width: 100%;
+  display: block;
+  background-size: cover;
+  padding-top: 40px;
+  background-position: center;
+  position: relative;
+  background-attachment: fixed;
+}
+
 /* Carousel */
 .carousel.slide {
   margin: auto;
@@ -31,6 +41,21 @@ html {
   font-style: italic;
 }
 
+/* About */
+.about__content {
+  width: 80%;
+  margin: auto;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.background-image__about {
+  background-image: url("/static/images/about.jpg");
+}
+
+.about__text {
+  text-align: center;
+}
 
 /* Card */
 .card {

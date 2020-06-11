@@ -1,0 +1,53 @@
+/* Sign up */
+.account__title {
+    background-color: pink;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.account-content {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.account__formWrapper {
+    flex-grow: 1
+}
+
+.account__form {
+    margin: 0 auto;
+    position: relative;
+}
+
+.account__img {
+    flex: 0 0 40%;
+    display: none;
+    background-image: url("/static/images/signin.jpg");
+    background-attachment: scroll;
+}
+
+.account__form input {
+    display: block;
+    margin: 0 0 14px;
+    padding: 19px 18px;
+    width: 100%;
+}
+
+.helptext {
+    display: none;
+}
+
+
+
+@media only screen and (min-width: 1025px) {
+    .account__form {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .account__img {
+        display: block;
+    }
+}
+
