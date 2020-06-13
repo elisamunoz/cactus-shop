@@ -1,0 +1,5 @@
+@media (min-width: 768px) {
+    .product__detail__img {
+        height: 600px;
+    }
+}

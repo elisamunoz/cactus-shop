@@ -27,13 +27,6 @@
     background-attachment: scroll;
 }
 
-.account__form input {
-    display: block;
-    margin: 0 0 14px;
-    padding: 19px 18px;
-    width: 100%;
-}
-
 .helptext {
     display: none;
 }
