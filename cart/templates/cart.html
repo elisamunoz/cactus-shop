@@ -1,22 +1,55 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<section class="cart">
+    <div class="container">
+        {% if product_count == 0 %}
+            <div class="empty-cart">
+                <h3>Your  cart is currently empty</h3>
+                <a class="button" href="{% url 'products_list' %}">Return to Shop</a>
+            </div>
 
+        {% else %}
+        <!-- Categories in shopping cart -->
+        <div class="row">
+            <!-- Image -->
+            <div class="col- col-lg-2"></div>
+            <!-- Product name -->
+            <div class="col-3 col-lg-3 cart__product-name">
+                <p>Product</p>
+            </div>
+            <!-- Price -->
+            <div class="col-3 col-lg-2 cart__product-name">
+                <p>Price</p>
+            </div>
+            <!-- Quantity -->
+            <div class="col-3 col-lg-2 cart__product-name">
+                <p>Quantity</p>
+            </div>
+            <!-- Total -->
+            <div class="col-3 col-lg-3 cart__product-name">
+                Total
+            </div>
+        </div>
 
-<div class="row row-flex">
-    {% for item in cart_items %}
-    
-    <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-display">
-        
-        <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')"></div>
-        
-        <div class="caption">
-            <h3>{{ item.product.name }}</h3>
-            <p class="product-description">{{ item.product.description }}</p>
-            <p>{{ item.product.price }}</p>
-            <p>
-                
-                <form class="form-inline" method="post" action="{% url 'update_cart' item.id %}">
+        <!-- Detail of products in shopping cart -->
+        <div class="row">
+            {% for item in cart_items %}
+            <!-- Image -->
+            <div class="col- col-lg-2">
+                <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')"></div>
+            </div>
+            <!-- Product name -->
+            <div class="col-3 col-lg-3 cart__product-name">
+                <p>{{ item.product.name }}</p>
+            </div>
+            <!-- Price -->
+            <div class="col-3 col-lg-2 cart__product-name">
+                <p>{{ item.product.price }}</p>
+            </div>
+            <!-- Quantity -->
+            <div class="col-3 col-lg-2 cart__product-name">
+                <form id="cart-update-form" class="form-inline" method="post" action="{% url 'update_cart' item.id %}">
                     {% csrf_token %}
                     <div class="form-group">
                         <label for="exampleInputAmount" class="sr-only">New Qty</label>
@@ -26,18 +59,31 @@
                             <div class="input-group-addon">{{item.quantity}}</div>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Amend</button>
                 </form>
-            </p>
+            </div>
+            <!-- Total -->
+            <div class="col-3 col-lg-3 cart__product-name">
+                <p>{{ item.product.price }}</p>
+            </div>
+        </div>
+            {% endfor %}
+
+        <!-- Update button -->
+        <div class="row">
+            <div class="col- col-lg-9"></div>
+            <div class="col-12 col-lg-3 cart__update-button">
+                <button type="submit" form="cart-update-form" class="button"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Update cart</button>
+            </div>
+        </div>
+        <div class="row">
+            <p>Total</p>
+            <p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ total }}</p>
+            <a href="{% url 'checkout' %}" class="btn btn-success" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
         </div>
     </div>
-    {% endfor %}
-</div>
-<div class="row">
-    <p>Total</p>
-    <p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ total }}</p>
-    <a href="{% url 'checkout' %}" class="btn btn-success" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
-</div>
+</section>
+{% endif %}
+
 
 
 {% endblock %}
