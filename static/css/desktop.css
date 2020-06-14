@@ -1,0 +1,33 @@
+@media (min-width: 1025px) {
+    .carousel__img {
+        width: 100%;
+        height: auto;
+    }
+
+    .about__content__container {
+        width: 100%;
+    }
+
+    .card__img {
+        height: 380px;
+    }
+
+    .some-products {
+        max-width: 70%;
+        margin: auto;
+    }
+
+    .about__content {
+        padding: 100px;
+      }
+
+   
+
+    .account__img {
+        display: inline-block;
+    }
+
+    #id_username, #id_password, #id_password1, #id_password2 {
+        width: 100%;
+    }
+}
