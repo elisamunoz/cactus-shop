@@ -35,8 +35,9 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-item nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
           <a class="nav-item nav-link" href="#">About</a>
+          <a class="nav-item nav-link" href="{% url 'products_list' %}">Shop</a>
           {% if user.is_authenticated %}
             <a class="nav-item nav-link" href="#">Hello {{ user }}</a>
             <a class="nav-item nav-link" href="{% url 'accounts:profile' %}">Profile</a>
@@ -46,8 +47,7 @@
             <a class="nav-item nav-link" href="{% url 'accounts:signup' %}">Sign up</a>
           {% endif %}
           <a class="nav-item nav-link" href="{% url 'cart' %}">
-            <i class="fa fa-shipping-cart"></i>Cart
-            <a class="nav-item nav-link" href="{% url 'products_list' %}">Shop</a>
+            <i class="fa fa-shipping-cart"></i>Cart</a>
             {% if product_count > 0 %}
               <label class="badge badge-warning">{{ product_count }}</label>
             {% endif %}

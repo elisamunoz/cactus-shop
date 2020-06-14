@@ -1,31 +1,43 @@
 {% extends 'base.html' %}
 {% block content %}
+<section id="shop">
+    <h1>Shop</h1>
+    <div class="container products"> 
+        <div class="row">
+            {% for product in products %}
+                    <div class="wrapper card_wrapper col-12 col-md-6 col-xl-3">
+                        <article class="card">
+                            <div class="card__img-wrapper">
+                                <a href="{% url 'product_detail' product.id %}">
+                                    <img src="{{ product.image.url }}" alt="plant image">
+                                </a>
+                            </div>
 
-<h1>Products</h1>
-<div class="products">
-    {% for product in products %}
-        <div class="product">
-            <a href="{% url 'product_detail' product.id %}">
-                <h2>{{ product.name}}</h2>
-                <img src="{{ product.image.url }}" alt="plant image">
-            </a>
-            <p>{{ product.price }}</p>
-            <p>{{ product.snippet }}</p>
-            <a href="{% url 'product_detail' product.id %}">
-                <button>Read More</button>
-            </a>
+                            <div class="card__body">
+                                <div class="card__body__header">
+                                <div class="card__body__header__text">
+                                    <h4 class="card__body__header__name">{{ product.name}}</h4>
+                                    <h6>{{ product.price }}</h6>
+                                    <p>{{ product.snippet }}</p>
+                                </div>
+                                <a href="{% url 'product_detail' product.id %}">Read More</a>
+                                <form method="post" action="{% url 'add_to_cart' product.id %}">
+                                    {% csrf_token %}
+                                    <div class="input-group">
+                                        <input name="quantity" type="number" min="1" max="100"  placeholder="Quantity">
+                                        <span class="input-group-btn">
+                                            <button class="button button-block" type="submit">Add</button>
+                                        </span>
+                                    </div>
+                                </form>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+    
+            {% endfor %}
+        </div> 
+    </div>
+</section>
 
-            <form method="post" action="{% url 'add_to_cart' product.id %}">
-                {% csrf_token %}
-                <div class="input-group">
-                    <input name="quantity" type="number" min="1" max="100" class="form-control" placeholder="Quantity">
-                    <span class="input-group-btn">
-                        <button class="btn btn-success" type="submit">Add</button>
-                    </span>
-                </div>
-            </form>
-        </div>
-            
-    {% endfor %}
-</div>
 {% endblock %}
