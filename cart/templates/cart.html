@@ -10,80 +10,66 @@
             </div>
 
         {% else %}
-        <!-- Categories in shopping cart -->
-        <div class="row">
-            <!-- Image -->
-            <div class="col- col-lg-2"></div>
-            <!-- Product name -->
-            <div class="col-3 col-lg-3 cart__product-name">
-                <p>Product</p>
-            </div>
-            <!-- Price -->
-            <div class="col-3 col-lg-2 cart__product-name">
-                <p>Price</p>
-            </div>
-            <!-- Quantity -->
-            <div class="col-3 col-lg-2 cart__product-name">
-                <p>Quantity</p>
-            </div>
-            <!-- Total -->
-            <div class="col-3 col-lg-3 cart__product-name">
-                Total
-            </div>
-        </div>
-
-        <!-- Detail of products in shopping cart -->
-        <div class="row">
-            {% for item in cart_items %}
-            <!-- Image -->
-            <div class="col- col-lg-2">
-                <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')"></div>
-            </div>
-            <!-- Product name -->
-            <div class="col-3 col-lg-3 cart__product-name">
-                <p>{{ item.product.name }}</p>
-            </div>
-            <!-- Price -->
-            <div class="col-3 col-lg-2 cart__product-name">
-                <p>{{ item.product.price }}</p>
-            </div>
-            <!-- Quantity -->
-            <div class="col-3 col-lg-2 cart__product-name">
-                <form id="cart-update-form" class="form-inline" method="post" action="{% url 'update_cart' item.id %}">
-                    {% csrf_token %}
-                    <div class="form-group">
-                        <label for="exampleInputAmount" class="sr-only">New Qty</label>
-                        <div class="input-group">
-                            <div class="input-group-addon">Qty</div>
-                            <input name="quantity" type="number" min="0" max="100" class="form-control">
-                            <div class="input-group-addon">{{item.quantity}}</div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <!-- Total -->
-            <div class="col-3 col-lg-3 cart__product-name">
-                <p>{{ item.product.price }}</p>
-            </div>
-        </div>
+        <div class="cart__table">
+            <table>
+                <!-- Categories in shopping cart -->
+                <tr>
+                    <th class="cart__table-category__img"></th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </tr>
+                <!-- Detail of products in shopping cart -->
+                {% for item in cart_items %}
+                <tr>
+                    <td class="cart__table-category__img"><div class="cart__table__img" style="background-image: url('https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/shop-2-img-300x400.jpg')"></div></td>
+                    <td>{{ item.product.name }}</td>
+                    <td>{{ item.product.price }}</td>
+                    <td>
+                        <form id="cart-update-form" class="form-inline" method="post" action="{% url 'update_cart' item.id %}">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label for="exampleInputAmount" class="sr-only">New Qty</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon"></div>
+                                    <input name="quantity" type="number" min="0" max="100" class="form-control">
+                                    <div class="input-group-addon">{{item.quantity}}</div>
+                                </div>
+                            </div>
+                        </form>
+                    </td>
+                <td>{{ item.total }}</td>
+                </tr>
             {% endfor %}
+            </table>
+        </div>
 
         <!-- Update button -->
-        <div class="row">
-            <div class="col- col-lg-9"></div>
-            <div class="col-12 col-lg-3 cart__update-button">
-                <button type="submit" form="cart-update-form" class="button"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Update cart</button>
-            </div>
-        </div>
-        <div class="row">
-            <p>Total</p>
-            <p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ total }}</p>
-            <a href="{% url 'checkout' %}" class="btn btn-success" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
+        <button type="submit" form="cart-update-form" class="button"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Update cart</button>
+
+        <!-- Total table -->
+
+        <div class="cart__table__total">
+            <h2>Cart Total</h2>
+            <table>
+                <!-- Categories in shopping cart -->
+                <tr>
+                    <td>Sub-Total</td>
+                    <td>{{ sub_total }}</td>
+                </tr>
+                <tr>
+                    <td>Shipping</td>
+                    <td>{{ shipping }}</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>{{ total }}</td>
+                </tr>
+            </table>
+            <a href="{% url 'checkout' %}" class="button" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Proceed to Checkout</a>
         </div>
     </div>
 </section>
 {% endif %}
-
-
-
 {% endblock %}

@@ -149,6 +149,20 @@ input {
   margin: auto;
 }
 
+
+/* Cart */
+.cart__table {
+  width: 100%;
+}
+
+.cart__table-category__img {
+  display: none;
+}
+
+.cart__table__total {
+  width: 100%;
+}
+
 /* Footer */
 
 .social-links {
