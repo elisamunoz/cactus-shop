@@ -57,7 +57,7 @@ input {
 }
 
 .background-image__about {
-  background-image: url("/static/images/about.jpg");
+  background-image: url("/images/about.jpg");
 }
 
 .about__text {
