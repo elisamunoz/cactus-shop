@@ -1,11 +1,11 @@
-from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
  
 def home(request):
-    # return HttpResponse('home')
     return render(request, 'home.html')
 
 def about(request):
-    # return HttpResponse('about')
-    return render(request, 'about.html')
+    return redirect('home', _anchor='about')
+
+def error_page(request):
+    return render(request, 'error_page.html')

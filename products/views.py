@@ -14,13 +14,20 @@ def products_list(request):
 def product_detail(request, pk):
     """ Creates a view that returns a single Products based on its ID or returns a 404 error if product doesn't exist
     """
-    product = get_object_or_404(Product, pk=pk )
-    product.save()
-    return render(request, "productdetail.html", {"product": product})
+    try:
+        product = get_object_or_404(Product, pk=pk )
+        product.save()
+        return render(request, "productdetail.html", {"product": product})
+    
+    except Exception:
+        return redirect('error_page')
 
 
 @user_passes_test(lambda u: u.is_superuser)
 def product_create(request):
+    """
+    This allows a superuser to create products
+    """
     if request.method == 'POST':
         form = CreateProduct(request.POST, request.FILES)
         if form.is_valid():

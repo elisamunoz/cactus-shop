@@ -14,16 +14,20 @@ def update_cart(request, id):
     """ 
     This view modify amount of products in the shopping cart 
     """
-    quantity = int(request.POST.get('quantity'))
-    cart = request.session.get('cart', {})
+    try:
+        quantity = int(request.POST.get('quantity'))
+        cart = request.session.get('cart', {})
 
-    if quantity > 0:
-        cart[id] = quantity
-    else:
-        cart.pop(id)
+        if quantity > 0:
+            cart[id] = quantity
+        else:
+            cart.pop(id)
 
-    request.session['cart'] = cart
-    return redirect(reverse('cart'))
+        request.session['cart'] = cart
+        return redirect(reverse('cart'))
+
+    except Exception:
+        return redirect('error_page')
 
 
 @login_required
@@ -31,13 +35,17 @@ def add_to_cart(request, id):
     """ 
     This view allows the user to add a certain amount of products
     """
-    quantity = int(request.POST.get('quantity'))
+    try:
+        quantity = int(request.POST.get('quantity'))
 
-    cart = request.session.get('cart', {})
-    if id in cart:
-        cart[id] = int(cart[id] + quantity)
-    else:
-        cart[id] = cart.get(id, quantity)
+        cart = request.session.get('cart', {})
+        if id in cart:
+            cart[id] = int(cart[id] + quantity)
+        else:
+            cart[id] = cart.get(id, quantity)
 
-    request.session['cart'] = cart
-    return redirect(reverse('products_list'))
+        request.session['cart'] = cart
+        return redirect(reverse('products_list'))
+        
+    except Exception:
+        return redirect('error_page')
