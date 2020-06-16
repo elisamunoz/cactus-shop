@@ -2,7 +2,8 @@
     .carousel__img {
         width: 100%;
         height: auto;
-    }
+        margin: 0px auto;
+        }
 
     .about__content__container {
         width: 100%;

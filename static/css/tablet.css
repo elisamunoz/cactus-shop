@@ -1,4 +1,9 @@
 @media (min-width: 768px) {
+    .carousel__img {
+        height: 100%;
+        margin: 0px -1100px;
+      }
+
     .product__detail__img {
         height: 600px;
     }
