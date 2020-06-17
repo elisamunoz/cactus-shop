@@ -8,6 +8,16 @@
         height: 600px;
     }
 
+    .quantity-form {
+        display: inline-block;
+        width: 59%;
+    }
+
+    .product__detail__button {
+        width: 40%;
+        display: inline-block;
+      }
+
     .cart__table-category__img {
         display: block;
       }

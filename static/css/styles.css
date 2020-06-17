@@ -60,6 +60,17 @@ input {
   padding: 100px 0;
   text-align: center;
 }
+.about-card {
+  padding: 40px 30px;
+  background: #ffffff;
+  border: 2px solid #f0f0f0;
+  margin: 10px 0;
+}
+
+.about-card__icon {
+  font-size: 40px;
+}
+
 
 .background-image__about {
   background-image: url("/images/about.jpg");
@@ -150,6 +161,9 @@ input {
   width: 50%;
   margin: auto;
 }
+
+/* Products */
+
 
 /* Product detail */
 

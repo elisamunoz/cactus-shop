@@ -29,7 +29,7 @@
   <body>
     <!-- Header -->
     <nav class="navbar navbar-color navbar-expand-lg navbar-light">
-      <a class="navbar-brand" href="#">Catcus</a>
+      <a class="navbar-brand" href="{% url 'home' %}">Catcus</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -47,8 +47,8 @@
           <a class="nav-item nav-link" href="#">About</a>
           <a class="nav-item nav-link" href="{% url 'products_list' %}">Shop</a>
           {% if user.is_authenticated %}
-            <a class="nav-item nav-link" href="#">Hello {{ user }}</a>
-            <a class="nav-item nav-link" href="{% url 'accounts:profile' %}">Profile</a>
+            <!-- <a class="nav-item nav-link" href="#">Hello {{ user }}</a>
+            <a class="nav-item nav-link" href="{% url 'accounts:profile' %}">Profile</a> -->
             <a class="nav-item nav-link" href="{% url 'accounts:logout' %}">Logout</a>
           {% else %}
             <a class="nav-item nav-link" href="{% url 'accounts:login' %}">Sign in</a>

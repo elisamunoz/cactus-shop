@@ -15,10 +15,10 @@
                 <p>{{ product.description }}</p>
                 <form method="post" action="{% url 'add_to_cart' product.id %}">
                     {% csrf_token %}
-                    <div class="input-group">
-                        <input name="quantity" type="number" min="1" max="100" placeholder="Quantity">
-                        <span class="input-group-btn">
-                            <button class="button button-block" type="submit">Add</button>
+                    <div>
+                        <input class="quantity-form" value="1" name="quantity" type="number" min="1" max="100" placeholder="Quantity" required>
+                        <span>
+                            <button class="button product__detail__button" type="submit">Add to cart</button>
                         </span>
                     </div>
                 </form>
