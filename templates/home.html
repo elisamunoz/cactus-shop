@@ -80,70 +80,25 @@
       <!-- card -->
       <div id="cards" class="row">
 <!-- if -->
+        {% for product in products %}
         <div class="wrapper card_wrapper col-12 col-md-6 col-xl-3">
           <article class="card">
             <div class="card__img-wrapper">
-              <a href="/"><div class="card__img" style="background-image: url(https://lostinplantopia.files.wordpress.com/2018/11/img_9886.jpg);"></div></a>
+              <a href="/"><div class="card__img" style="background-image: url('{{ product.image.url }}');"></div></a>
             </div>
             <div class="card__body">
               <div class="card__body__header">
                 <div class="card__body__header__text">
-                  <h4 class="card__body__header__name">Monstera deliciosa</h4>
-                  <h6>€14</h6>
+                  <h4 class="card__body__header__name">{{ product.name }}</h4>
+                  <h6>€{{ product.price }}</h6>
                 </div>
-                <button type="submit" class="button button-block">Read more</button>  
+                <a class="button button-block" href="{% url 'product_detail' product.id %}">Read More</a>
               </div>
             </div>
           </article>
         </div>
-        <div class="wrapper card_wrapper col-12 col-md-6 col-xl-3">
-          <article class="card">
-            <div class="card__img-wrapper">
-              <a href="/"><div class="card__img" style="background-image: url(https://lostinplantopia.files.wordpress.com/2018/11/img_9886.jpg);"></div></a>
-            </div>
-            <div class="card__body">
-              <div class="card__body__header">
-                <div class="card__body__header__text">
-                  <h4 class="card__body__header__name">Monstera deliciosa</h4>
-                  <h6>€14</h6>
-                </div>
-                <button type="submit" class="button button-block">Read more</button>  
-              </div>
-            </div>
-          </article>
-        </div>
-        <div class="wrapper card_wrapper col-12 col-md-6 col-xl-3">
-          <article class="card">
-            <div class="card__img-wrapper">
-              <a href="/"><div class="card__img" style="background-image: url(https://lostinplantopia.files.wordpress.com/2018/11/img_9886.jpg);"></div></a>
-            </div>
-            <div class="card__body">
-              <div class="card__body__header">
-                <div class="card__body__header__text">
-                  <h4 class="card__body__header__name">Monstera deliciosa</h4>
-                  <h6>€14</h6>
-                </div>
-                <button type="submit" class="button button-block">Read more</button>  
-              </div>
-            </div>
-          </article>
-        </div>
-        <div class="wrapper card_wrapper col-12 col-md-6 col-xl-3">
-          <article class="card">
-            <div class="card__img-wrapper">
-              <a href="/"><div class="card__img" style="background-image: url(https://lostinplantopia.files.wordpress.com/2018/11/img_9886.jpg);"></div></a>
-            </div>
-            <div class="card__body">
-              <div class="card__body__header">
-                <div class="card__body__header__text">
-                  <h4 class="card__body__header__name">Monstera deliciosa</h4>
-                  <h6>€14</h6>
-                </div>
-                <button class="button button-block">Read more</button>  
-              </div>
-            </div>
-          </article>
-        </div>
+        {% endfor %}
+
 
 
 
