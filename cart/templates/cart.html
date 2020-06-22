@@ -1,16 +1,17 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<section class="cart">
-    <div class="container">
-        {% if product_count == 0 %}
-            <div class="empty-cart">
-                <h3>Your  cart is currently empty</h3>
-                <a class="button" href="{% url 'products_list' %}">Return to Shop</a>
-            </div>
+{% if product_count == 0 %}
+<div class="background-image error-emptycart">
+    <div class="error-emptycart__txt">
+        <h1>Your  cart is currently empty</h1>
+        <a class="button" href="{% url 'products_list' %}">Return to Shop</a>
+    </div>
+</div>
 
-        {% else %}
-        <div>
+{% else %}
+    <section class="cart">
+        <div class="container">
             <table class="cart__table">
                 <!-- Categories in shopping cart -->
                 <tr>
@@ -43,40 +44,38 @@
                     </tr>
                 {% endfor %}
             </table>
-
                 <!-- Update button -->
             <div class="cart__update__button">
                 <button type="submit" form="cart-update-form" class="button">Update cart</button>
             </div>
-        </div>
 
-        <!-- Total table -->
-        <div class="cart__table__total">
-            <h2>Cart Total</h2>
-            <div class="cart__table__total__data">
-                <table class="cart__table__total__data__table">
-                    <!-- Categories in shopping cart -->
-                    <tr>
-                        <td>Sub-Total</td>
-                        <td>€{{ sub_total }}</td>
-                    </tr>
-                    <tr>
-                        <td>Shipping</td>
-                        <td>€{{ shipping }}</td>
-                    </tr>
-                    <tr>
-                        <td>Total</td>
-                        <td>€{{ total }}</td>
-                    </tr>
-                </table>
-            </div>
-            
-            <!-- Cart checkout button -->
-            <div class="cart__table__checkout">
-                <a href="{% url 'checkout' %}" class="button" role="button">Proceed to Checkout</a>
+            <!-- Total table -->
+            <div class="cart__table__total">
+                <h2>Cart Total</h2>
+                <div class="cart__table__total__data">
+                    <table class="cart__table__total__data__table">
+                        <!-- Categories in shopping cart -->
+                        <tr>
+                            <td>Sub-Total</td>
+                            <td>€{{ sub_total }}</td>
+                        </tr>
+                        <tr>
+                            <td>Shipping</td>
+                            <td>€{{ shipping }}</td>
+                        </tr>
+                        <tr>
+                            <td>Total</td>
+                            <td>€{{ total }}</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <!-- Cart checkout button -->
+                <div class="cart__table__checkout">
+                    <a href="{% url 'checkout' %}" class="button" role="button">Proceed to Checkout</a>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 {% endif %}
 {% endblock %}

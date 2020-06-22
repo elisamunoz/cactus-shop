@@ -4,6 +4,10 @@
         margin: 0px -1100px;
       }
 
+    .about-card {   
+        padding: 40px 20px;
+    }
+
     .product__detail__img {
         height: 600px;
     }
@@ -29,5 +33,9 @@
 
     .cart__table__total {
         width: 50%;
+    }
+
+    .error-emptycart__txt {
+        margin-top: 160px;
     }
 }

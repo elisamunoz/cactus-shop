@@ -9,6 +9,14 @@ html {
   height: 100%;
 }
 
+h1 {
+  margin: 0;
+}
+
+p {
+  font-weight: 400;
+}
+
 input {
   display: block;
   margin: 0 0 14px;
@@ -71,30 +79,44 @@ input {
 
 /* About */
 .about__content {
-  width: 80%;
+  width: 90%;
   margin: auto;
-  padding: 100px 0;
+  padding: 30px 0;
   text-align: center;
 }
-.about-card {
-  padding: 40px 30px;
-  background: #ffffff;
-  border: 2px solid #f0f0f0;
-  margin: 10px 0;
-}
-
-.about-card__icon {
-  font-size: 40px;
-}
-
 
 .background-image__about {
   background-image: url("/images/about.jpg");
   background-attachment: fixed;
 }
 
+.about-card {
+  padding: 20px 15px;
+  /* background: #ffffff;
+  border: 2px solid #f0f0f0; */
+  margin: 15px 0;
+  display: inline-block;
+}
+
+.about-card__icon {
+  font-size: 40px;
+}
+
+.about-card__text {
+  padding-top: 15px;
+}
+
+.about-card__text h5 {
+  font-size: 1.1rem;
+}
+
 .about__text {
   text-align: center;
+  margin-top: 40px;
+}
+
+.about__text h5 {
+  margin-top: 15px;
 }
 
 /* Card */
@@ -103,6 +125,10 @@ input {
   margin: 10px auto;
   max-width: 600px;
   border: none;
+}
+
+.card_wrapper {
+  margin: 20px 0;
 }
 
 .card__img-wrapper {
@@ -127,7 +153,7 @@ input {
 }
 
 .card__img:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .card__body {
@@ -141,12 +167,18 @@ input {
 .card__body__header__text {
   display: inline-block;
   text-align: center;
+  margin: 15px 0;
+  width: 100%;
+}
+
+.card__body__header__text h5{
+  font-size: 1.2rem;
 }
 
 .card__body__header__name {
   line-height: 1.5;
   margin: 0 0 10px;
-  font-size: 1.2em;
+  font-size: 1.3em;
   text-transform: capitalize;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -214,6 +246,20 @@ input {
 
 .cart__table__total__data__table {
   width: 100%
+}
+
+/* Error page - Empty cart */
+.error-emptycart{
+  background-image: url("/static/images/error-emptycart.jpg");
+  min-height: calc(100vh - 80px);
+}
+.error-emptycart__txt {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.error-emptycart__txt h1 {
+  margin-bottom: 40px;
 }
 
 /* Footer */

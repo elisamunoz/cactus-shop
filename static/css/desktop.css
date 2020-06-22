@@ -29,4 +29,8 @@
     #id_username, #id_password, #id_password1, #id_password2 {
         width: 100%;
     }
+
+    .error-emptycart__txt {
+        margin-top: 110px;
+    }
 }
