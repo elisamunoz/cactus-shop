@@ -51,7 +51,7 @@
             <a class="nav-item nav-link" href="{% url 'accounts:profile' %}">Profile</a> -->
             <a class="nav-item nav-link" href="{% url 'accounts:logout' %}">Logout</a>
           {% else %}
-            <a class="nav-item nav-link" href="{% url 'accounts:login' %}">Sign in</a>
+            <a class="nav-item nav-link" href="{% url 'accounts:signin' %}">Sign in</a>
             <a class="nav-item nav-link" href="{% url 'accounts:signup' %}">Sign up</a>
           {% endif %}
           <a class="nav-item nav-link" href="{% url 'cart' %}">

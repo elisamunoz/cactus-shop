@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, reverse
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 
@@ -37,14 +38,16 @@ def add_to_cart(request, id):
     """
     try:
         quantity = int(request.POST.get('quantity'))
+        cart = request.session.get('cart', {})   
 
-        cart = request.session.get('cart', {})
+
         if id in cart:
             cart[id] = int(cart[id] + quantity)
         else:
             cart[id] = cart.get(id, quantity)
 
         request.session['cart'] = cart
+        messages.success(request, "test")
         return redirect(reverse('products_list'))
         
     except Exception:

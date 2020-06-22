@@ -22,8 +22,8 @@ def signup_view(request):
     return render(request, 'signup.html', {'form': form})
 
 
-def login_view(request):
-    """ This view manages the login """
+def signin_view(request):
+    """ This view manages the signin """
     if request.method == "POST":
         form = AuthenticationForm(data=request.POST)
         if form.is_valid():
@@ -37,7 +37,7 @@ def login_view(request):
             messages.error(request, "User or password are incorrect")
     else:
         form = AuthenticationForm()
-    return render(request, "login.html", {'form': form})
+    return render(request, "signin.html", {'form': form})
 
 
 def logout_view(request):
