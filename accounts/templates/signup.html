@@ -5,7 +5,7 @@
   <section class="account-content background-image">
     <div class="account__formWrapper">
       <div class="account__form">
-        <h1>Sign up</h1>
+        <h1 class="section__title">Sign up</h1>
         <form action="{% url 'accounts:signup' %}" method="post" class="">
             {% csrf_token %}
             {{form}}
