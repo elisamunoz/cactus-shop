@@ -31,10 +31,8 @@ def login_view(request):
             user = form.get_user()
             login(request, user)
             messages.success(request, "You have successfully logged in")
-            if 'next' in request.POST:
-                return redirect(request.POST.get('next'))
-            else:
-                return redirect("products_list")
+
+            return redirect("products_list")
         else: 
             messages.error(request, "User or password are incorrect")
     else:
