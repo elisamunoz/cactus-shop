@@ -7,6 +7,7 @@ a:hover {
 body,
 html {
   height: 100%;
+  color: #1b1b1b;
 }
 
 h1 {
@@ -26,7 +27,7 @@ input {
 }
 
 .site-content {
-  min-height: calc(100vh - 80px);
+  min-height: calc(100vh - 130px);
 }
 
 .background-image {
@@ -66,11 +67,35 @@ input {
 
 
 /* Menu */
+.navbar {
+  min-height: 90px;
+}
+
+.navbar-brand {
+  font-size: 2.4rem;
+  font-weight: 500;
+  letter-spacing: .1em;
+  padding-left: 20px;
+}
+
 .navbar-nav {
   margin-left: auto;
+  font-size: 14px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-right: 25px;
+  padding-left: 25px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .1em;
 }
 
 /* Carousel */
+.home {
+  height: 57vh;
+}
+
 .carousel.slide {
   margin: auto;
   width:100%;
@@ -272,7 +297,7 @@ input {
 }
 .error-emptycart__txt {
   text-align: center;
-  margin-top: 60px;
+  padding-top: 60px;
 }
 
 .error-emptycart__txt h1 {
@@ -281,6 +306,11 @@ input {
 
 /* Footer */
 
+footer {
+  height: 40px;
+}
+
 .social-links {
   margin: auto;
+  padding: 8px 0;
 }

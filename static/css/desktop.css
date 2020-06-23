@@ -1,8 +1,11 @@
 @media (min-width: 1025px) {
+    .section__subtitle {
+      
+    }
+
     .carousel__img {
         width: 100%;
         height: auto;
-        margin: 0px auto;
         }
 
     .about__content__container {
@@ -31,6 +34,6 @@
     }
 
     .error-emptycart__txt {
-        margin-top: 110px;
+        padding-top: 110px;
     }
 }
