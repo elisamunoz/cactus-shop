@@ -44,7 +44,7 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-item nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="#">About</a>
+          <a class="nav-item nav-link" href="{% url 'home' %}">About</a>
           <a class="nav-item nav-link" href="{% url 'products_list' %}">Shop</a>
           {% if user.is_authenticated %}
             <!-- <a class="nav-item nav-link" href="#">Hello {{ user }}</a>
