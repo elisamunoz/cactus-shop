@@ -64,6 +64,7 @@ input {
   color: #fff;
 }
 
+
 /* Menu */
 .navbar-nav {
   margin-left: auto;
@@ -87,6 +88,15 @@ input {
 .carousel-caption h5 {
   font-style: italic;
 }
+
+.service {
+  padding: 30px 0;
+}
+
+.service__content__container {
+  text-align: center;
+}
+
 
 /* About */
 .about__content {

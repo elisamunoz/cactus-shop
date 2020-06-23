@@ -6,7 +6,7 @@ def home(request):
     return render(request, 'home.html',  {"products": products})
 
 def about(request):
-    return redirect('home', _anchor='about')
+    return render(request, 'about.html')
 
 def error_page(request):
     return render(request, 'error_page.html')

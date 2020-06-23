@@ -61,7 +61,7 @@ This section will show the latest 4 - 8 plants the shop owner uploads to the dat
 
 ### Hosting
 - Github: to host the code project ************
-- AWS: to host images and static files including CSS and Javascript
+- S3 Buckets from AWS: to host images and static files including CSS and Javascript
 - Heroku: to host the live view of this ptoject
 
 
