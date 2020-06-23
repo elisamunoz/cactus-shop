@@ -14,57 +14,61 @@
 
 {% block content %}
 <section class="checkout">
-    <h1 class="section__title">Checkout</h1>
-    <form role ="form" id="payment-form" class="container" action="{% url 'checkout' %}" method="post">
-        <div class="row">
-            <legend>Payment Details</legend>
-            <div id="credit-card-errors" style="display: none;">
-                <div class="alert-message block-message error" id="stripe-error-mesage"></div>
+    <div class="checkout__form">
+        <h1 class="section__title">Checkout</h1>
+        <form role ="form" id="payment-form" class="container" action="{% url 'checkout' %}" method="post">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="section__subtitle">Payment Details</h3>
+                </div>
+                <div id="credit-card-errors" style="display: none;">
+                    <div class="alert-message block-message error" id="stripe-error-mesage"></div>
+                </div>
+            
+                <div class="col-12 col-md-6">
+                    {{ order_form | as_bootstrap }}
+                </div>
+            
+                <div class="col-12 col-md-6">
+                    {{ payment_form | as_bootstrap }}
+                </div>
             </div>
-        
-            <div class="col-12 col-md-6">
-                {{ order_form | as_bootstrap }}
-            </div>
-        
-            <div class="col-12 col-md-6">
-                {{ payment_form | as_bootstrap }}
-            </div>
-        </div>
-        
-        <h2>Your Order</h2>
-        <div class="checkout__order">
-            <table class="checkout__table">
-                <!-- Categories in shopping cart -->
-                <tr>
-                    <th>Product</th>
-                    <th>Total</th>
-                </tr>
-                <!-- Detail of products in shopping cart -->
-                {% for item in cart_items %}
+            
+            <h2>Your Order</h2>
+            <div class="checkout__order">
+                <table class="checkout__table">
+                    <!-- Categories in shopping cart -->
                     <tr>
-                        <td>{{ item.product.name }} x {{item.quantity}}</td>
-                        <td>{{ item.total }}</td>
+                        <th>Product</th>
+                        <th>Total</th>
                     </tr>
-                {% endfor %}
-                <tr>
-                    <td>Sub-Total</td>
-                    <td>{{ sub_total }}</td>
-                </tr>
-                <tr>
-                    <td>Shipping</td>
-                    <td>{{ shipping }}</td>
-                </tr>
-                <tr>
-                    <td>Total</td>
-                    <td><span class="glyphicon gliphicon-euro" aria-hidden="true"></span>{{ total }}</td>
-                </tr>
-            </table>
-        </div>
+                    <!-- Detail of products in shopping cart -->
+                    {% for item in cart_items %}
+                        <tr>
+                            <td>{{ item.product.name }} x {{item.quantity}}</td>
+                            <td>{{ item.total }}</td>
+                        </tr>
+                    {% endfor %}
+                    <tr>
+                        <td>Sub-Total</td>
+                        <td>{{ sub_total }}</td>
+                    </tr>
+                    <tr>
+                        <td>Shipping</td>
+                        <td>{{ shipping }}</td>
+                    </tr>
+                    <tr>
+                        <td>Total</td>
+                        <td><span class="glyphicon gliphicon-euro" aria-hidden="true"></span>{{ total }}</td>
+                    </tr>
+                </table>
+            </div>
             {% csrf_token %}
             <div class="col-md-3">
-                <input type="submit" name="commit" value="Submit Payment" class="btn btn-primary" id="submit_payment_btn">
+                <input type="submit" name="commit" value="Submit Payment" class="button" id="submit_payment_btn">
             </div>
-    </form>
+        </form>
+    </div>
 </section>
 
 {% endblock %}
