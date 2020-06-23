@@ -2,30 +2,20 @@
 
 {% block content%}
 <div class="account">
-    <section class="account__title">
-      <div class="container">
-        <div class="account__title__text">
-          <h1>My account</h1>
-        </div>
+  <section class="account-content background-image">
+    <div class="account__formWrapper">
+      <div class="account__form">
+        <h1 class="section__title">Sign up</h1>
+        <form action="{% url 'accounts:signup' %}" method="post" class="">
+            {% csrf_token %}
+            {{form}}
+            <input type="submit" class="button" value="Sign up">
+            <p>You have already signed up? Sign in <a href="{% url 'accounts:signin' %}">here</a></p>
+        </form>
       </div>
-    </section>
-    
-    <!-- Sign up form -->
-
-
-    <section class="account-content">
-      <div class="account__formWrapper">
-        <div class="account__form">
-          <h1>Sign up</h1>
-          <form action="{% url 'accounts:signup' %}" method="post" class="">
-              {% csrf_token %}
-              {{form}}
-              <input type="submit" class="button" value="Sign up">
-          </form>
-        </div>
-      </div>
-      <div class="account__img"></div>
-    </section>
+    </div>
+    <div class="account__img account__img__signup"></div>
+  </section>
 </div>
 
 {% endblock %}

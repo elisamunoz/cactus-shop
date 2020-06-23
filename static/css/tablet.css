@@ -1,7 +1,26 @@
 @media (min-width: 768px) {
+    .carousel__img {
+        height: 100%;
+        /* margin: 0px -1100px; */
+      }
+
+    .about-card {   
+        padding: 40px 20px;
+    }
+
     .product__detail__img {
         height: 600px;
     }
+
+    .quantity-form {
+        display: inline-block;
+        width: 59%;
+    }
+
+    .product__detail__button {
+        width: 40%;
+        display: inline-block;
+      }
 
     .cart__table-category__img {
         display: block;
@@ -14,5 +33,9 @@
 
     .cart__table__total {
         width: 50%;
+    }
+
+    .error-emptycart__txt {
+        margin-top: 160px;
     }
 }

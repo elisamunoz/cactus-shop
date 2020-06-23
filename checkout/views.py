@@ -20,7 +20,7 @@ def checkout(request):
     """  
     This function validates payment, accepting or decling payment
     """
-    if request.method=="POST":
+    if request.method == "POST":
         order_form = OrderForm(request.POST)
         payment_form = MakePaymentForm(request.POST)
 
