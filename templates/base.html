@@ -54,12 +54,11 @@
             <a class="nav-item nav-link" href="{% url 'accounts:signin' %}">Sign in</a>
             <a class="nav-item nav-link" href="{% url 'accounts:signup' %}">Sign up</a>
           {% endif %}
-          <a class="nav-item nav-link" href="{% url 'cart' %}">
-            <i class="fa fa-shipping-cart"></i>Cart</a>
+          <a class="nav-item nav-link" href="{% url 'cart' %}">Cart <i class="fas fa-shopping-bag">
             {% if product_count > 0 %}
               <label class="badge badge-warning">{{ product_count }}</label>
             {% endif %}
-          </a>
+          </i></a>
         </div>
       </div>
     </nav>

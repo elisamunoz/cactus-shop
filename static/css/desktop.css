@@ -1,27 +1,32 @@
 @media (min-width: 1025px) {
+    /* Common content width */
+    .navbar,
+    .cart__container,
+    .some-products,
+    .shop,
+    .about__content,
+    .checkout {
+        max-width: 1100px;
+        margin: auto;
+    }
 
+    /* Carousel */
     .carousel__img {
         width: 100%;
         height: auto;
-        }
-
-    .about__content__container {
-        width: 100%;
     }
-
+  
+    /* Products */
     .card__img {
         height: 380px;
     }
 
-    .some-products {
-        max-width: 70%;
+    .create-product__form {
+        max-width: 574px;
         margin: auto;
     }
 
-    .about__content {
-        padding: 100px;
-      }
-
+    /* Accounts */
     .account__img {
         display: inline-block;
     }
@@ -30,11 +35,7 @@
         width: 100%;
     }
 
-    .create-product__form {
-        max-width: 574px;
-        margin: auto;
-    }
-
+    /* Error / Empty cart */
     .error-emptycart__txt {
         padding-top: 110px;
     }

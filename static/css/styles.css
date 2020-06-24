@@ -106,6 +106,19 @@ textarea {
   letter-spacing: .1em;
 }
 
+.nav-item i {
+  position: relative;
+  font-size: 18px;
+}
+
+.badge-warning {
+  border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;
+  top: -4px;
+  left: 11px;
+}
+
 /* Carousel */
 .home {
   height: 57vh;
@@ -121,8 +134,11 @@ textarea {
 }
 
 .carousel__img {
-  height: 100%;
-  /* margin: 0px -660px; */
+  position: absolute;
+  height: 420px;
+  width: 1307px;
+  transform: translate3d(0px, 0px, 0px);
+  transform-origin: 0% 0% 0px;
 }
 
 .carousel-caption h5 {
@@ -320,7 +336,7 @@ textarea {
 /* Error page - Empty cart */
 .error-emptycart{
   background-image: url("/static/images/error-emptycart.jpg");
-  min-height: calc(100vh - 80px);
+  min-height: calc(100vh - 130px);
 }
 .error-emptycart__txt {
   text-align: center;
