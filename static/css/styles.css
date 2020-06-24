@@ -26,6 +26,21 @@ input {
   font-size: 12px;
 }
 
+tr {
+  border-bottom: 1px solid #e8e8e8;
+}
+
+th,
+td {
+  padding: 25px 0;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  margin: 0 0 14px;
+}
+
 .site-content {
   min-height: calc(100vh - 130px);
 }
@@ -289,6 +304,18 @@ input {
 .cart__table__total__data__table {
   width: 100%
 }
+
+/* Checkout */
+
+.checkout__order {
+  width: 100%;
+}
+
+.checkout__table {
+  margin: auto;
+}
+
+
 
 /* Error page - Empty cart */
 .error-emptycart{
