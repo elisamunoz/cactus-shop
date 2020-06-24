@@ -1,5 +1,6 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from products.models import Product
 from django.contrib.auth.decorators import login_required
 
 
@@ -18,7 +19,7 @@ def update_cart(request, id):
     try:
         quantity = int(request.POST.get('quantity'))
         cart = request.session.get('cart', {})
-
+        
         if quantity > 0:
             cart[id] = quantity
         else:
@@ -39,7 +40,7 @@ def add_to_cart(request, id):
     try:
         quantity = int(request.POST.get('quantity'))
         cart = request.session.get('cart', {})   
-
+        product = get_object_or_404(Product, pk=id)
 
         if id in cart:
             cart[id] = int(cart[id] + quantity)
@@ -47,7 +48,7 @@ def add_to_cart(request, id):
             cart[id] = cart.get(id, quantity)
 
         request.session['cart'] = cart
-        messages.success(request, "test")
+        messages.success(request, "You added " + product.name + " to your cart")
         return redirect(reverse('products_list'))
         
     except Exception:

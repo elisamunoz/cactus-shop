@@ -11,8 +11,8 @@
 
 {% else %}
     <section class="cart">
-        <div class="container section__title">
-            <h1>Cart</h1>
+        <div class="cart__container">
+            <h1 class="section__title">Cart</h1>
             <table class="cart__table">
                 <!-- Categories in shopping cart -->
                 <tr>
@@ -57,15 +57,15 @@
                     <table class="cart__table__total__data__table">
                         <!-- Categories in shopping cart -->
                         <tr>
-                            <td>Sub-Total</td>
+                            <td><strong>Sub-Total</strong></td>
                             <td>€{{ sub_total }}</td>
                         </tr>
                         <tr>
-                            <td>Shipping</td>
+                            <td><strong>Shipping</strong></td>
                             <td>€{{ shipping }}</td>
                         </tr>
                         <tr>
-                            <td>Total</td>
+                            <td><strong>Total</strong></td>
                             <td>€{{ total }}</td>
                         </tr>
                     </table>

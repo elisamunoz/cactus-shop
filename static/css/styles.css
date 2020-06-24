@@ -7,6 +7,7 @@ a:hover {
 body,
 html {
   height: 100%;
+  color: #1b1b1b;
 }
 
 h1 {
@@ -25,8 +26,23 @@ input {
   font-size: 12px;
 }
 
+tr {
+  border-bottom: 1px solid #e8e8e8;
+}
+
+th,
+td {
+  padding: 25px 0;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  margin: 0 0 14px;
+}
+
 .site-content {
-  min-height: calc(100vh - 80px);
+  min-height: calc(100vh - 130px);
 }
 
 .background-image {
@@ -66,11 +82,48 @@ input {
 
 
 /* Menu */
+.navbar {
+  min-height: 90px;
+}
+
+.navbar-brand {
+  font-size: 2.4rem;
+  font-weight: 500;
+  letter-spacing: .1em;
+  padding-left: 20px;
+}
+
 .navbar-nav {
   margin-left: auto;
+  font-size: 14px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-right: 25px;
+  padding-left: 25px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+.nav-item i {
+  position: relative;
+  font-size: 18px;
+}
+
+.badge-warning {
+  border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;
+  top: -4px;
+  left: 11px;
 }
 
 /* Carousel */
+.home {
+  height: 57vh;
+}
+
 .carousel.slide {
   margin: auto;
   width:100%;
@@ -81,8 +134,11 @@ input {
 }
 
 .carousel__img {
-  height: 100%;
-  /* margin: 0px -660px; */
+  position: absolute;
+  height: 420px;
+  width: 1307px;
+  transform: translate3d(0px, 0px, 0px);
+  transform-origin: 0% 0% 0px;
 }
 
 .carousel-caption h5 {
@@ -265,14 +321,26 @@ input {
   width: 100%
 }
 
+/* Checkout */
+
+.checkout__order {
+  width: 100%;
+}
+
+.checkout__table {
+  margin: auto;
+}
+
+
+
 /* Error page - Empty cart */
 .error-emptycart{
   background-image: url("/static/images/error-emptycart.jpg");
-  min-height: calc(100vh - 80px);
+  min-height: calc(100vh - 130px);
 }
 .error-emptycart__txt {
   text-align: center;
-  margin-top: 60px;
+  padding-top: 60px;
 }
 
 .error-emptycart__txt h1 {
@@ -281,6 +349,11 @@ input {
 
 /* Footer */
 
+footer {
+  height: 40px;
+}
+
 .social-links {
   margin: auto;
+  padding: 8px 0;
 }
