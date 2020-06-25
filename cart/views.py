@@ -12,18 +12,23 @@ def view_cart(request):
 
 
 @login_required
-def update_cart(request, id):
+def update_cart(request):
     """ 
     This view modify amount of products in the shopping cart 
     """
     try:
-        quantity = int(request.POST.get('quantity'))
         cart = request.session.get('cart', {})
-        
-        if quantity > 0:
-            cart[id] = quantity
-        else:
-            cart.pop(id)
+
+        for key, value in request.POST.items():
+            itemId = str(key)
+            
+            if itemId in cart:
+                quantity = int(value)
+
+                if quantity > 0:
+                    cart[itemId] = quantity
+                else:
+                    cart.pop(itemId)
 
         request.session['cart'] = cart
         return redirect(reverse('cart'))
