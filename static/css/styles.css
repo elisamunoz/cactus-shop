@@ -4,6 +4,12 @@ a:hover {
   text-decoration: none;
 }
 
+/* 
+font-family: 'Lora', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Playfair Display', serif; 
+*/
+
 body,
 html {
   height: 100%;
@@ -16,6 +22,9 @@ h1 {
 
 p {
   font-weight: 400;
+  font-family: 'Lora', serif;
+  color: #6d6a6a;
+  font-size: 1.1rem;
 }
 
 input {
@@ -55,8 +64,9 @@ textarea {
 
 .section__title {
   padding: 40px 0 30px;
-  text-transform: uppercase;
   text-align: center;
+  font-family: 'Playfair Display', serif; 
+  font-size: 38px;
 }
 
 .button {
@@ -90,7 +100,8 @@ textarea {
   font-size: 2.4rem;
   font-weight: 500;
   letter-spacing: .1em;
-  padding-left: 20px;
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
 }
 
 .navbar-nav {
@@ -282,11 +293,29 @@ textarea {
   margin: auto;
 }
 
-.product__detail__button {
-  padding: 19px 18px;
-  border: 2px solid #1ab188;
+.product__detail__name {
+  padding: 25px 0;
 }
 
+.product__detail__price {
+  padding: 10px 0;
+  font-size: 1.2rem;
+}
+
+.product__detail__form {
+  padding: 20px 0;
+}
+
+.quantity-form {
+  display: inline-block;
+  width: 58%;
+}
+
+.product__detail__form__button {
+  padding: 19px 18px;
+  border: 2px solid #1ab188;
+  width: 40%;
+}
 
 /* Cart */
 .cart__table {

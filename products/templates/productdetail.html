@@ -10,15 +10,15 @@
                 {% endif %}  
             </div>
             <div class="col-12 col-lg-6">
-                <h1>{{ product.name }}</h1>
-                <p>€{{ product.price }}</p>
+                <h1 class="product__detail__name">{{ product.name }}</h1>
+                <p class="product__detail__price">€{{ product.price }}</p>
                 <p>{{ product.description }}</p>
-                <form method="post" action="{% url 'add_to_cart' product.id %}">
+                <form class="product__detail__form" method="post" action="{% url 'add_to_cart' product.id %}">
                     {% csrf_token %}
                     <div>
                         <input class="quantity-form" value="1" name="quantity" type="number" min="1" max="100" placeholder="Quantity" required>
                         <span>
-                            <button class="button product__detail__button" type="submit">Add to cart</button>
+                            <button class="button product__detail__form__button" type="submit">Add to cart</button>
                         </span>
                     </div>
                 </form>
