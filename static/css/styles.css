@@ -13,7 +13,18 @@ font-family: 'Playfair Display', serif;
 body,
 html {
   height: 100%;
+  font-family: Montserrat, sans-serif;
   color: #1b1b1b;
+}
+
+.navbar,
+.cart__container,
+.some-products__container,
+.shop,
+.about__content,
+.checkout {
+    max-width: 690px;
+    margin: auto;
 }
 
 h1 {
@@ -115,6 +126,10 @@ textarea {
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: .1em;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
 }
 
 .nav-item i {
@@ -259,19 +274,22 @@ textarea {
   width: 100%;
 }
 
-.card__body__header__text h5{
-  font-size: 1.2rem;
-}
-
 .card__body__header__name {
   line-height: 1.5;
   margin: 0 0 10px;
-  font-size: 1.3em;
+  font-size: 1.1em;
   text-transform: capitalize;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  color: #1b1b1b;
 }
+
+.card__body__header__text h5 {
+  font-size: 1rem;
+  color: #505050;
+}
+
 
 .button-block {
   display: block;
@@ -300,6 +318,10 @@ textarea {
 .product__detail__price {
   padding: 10px 0;
   font-size: 1.2rem;
+}
+
+.product__detail__description {
+  white-space: pre-wrap;
 }
 
 .product__detail__form {
