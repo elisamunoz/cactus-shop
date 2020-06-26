@@ -15,6 +15,7 @@ html {
   height: 100%;
   font-family: Montserrat, sans-serif;
   color: #1b1b1b;
+  line-height: 29px;
 }
 
 .navbar,
@@ -80,6 +81,13 @@ textarea {
   font-size: 38px;
 }
 
+.section__subtitle {
+  font-family: playfair display, serif;
+  font-size: 30px;
+  margin: 19px 0;
+}
+
+
 .button {
   border: 0;
   outline: none;
@@ -128,13 +136,35 @@ textarea {
   letter-spacing: .1em;
 }
 
-.nav-link:hover {
-  text-decoration: underline;
+.underline {
+  display: inline;
+  position: relative;
+  overflow: hidden;
+}
+.underline:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  width: 0;
+  bottom: -5px;
+  background: #000;
+  height: 4px;
+  transition-property: width;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+.underline:hover:after,
+.underline:focus:after,
+.underline:active:after {
+  left: 0;
+  right: auto;
+  width: 100%;
 }
 
 .nav-item i {
   position: relative;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .badge-warning {
@@ -185,12 +215,7 @@ textarea {
   width: 90%;
   margin: auto;
   padding: 30px 0;
-  text-align: center;
-}
-
-.background-image__about {
-  background-image: url("/images/about.jpg");
-  background-attachment: fixed;
+  text-align: left;
 }
 
 .about-card {
@@ -220,6 +245,26 @@ textarea {
 
 .about__text h5 {
   margin-top: 15px;
+}
+/* 
+.about__content__image__container {
+  position: relative;
+  width: 100%;
+  height: auto;
+} */
+
+.about__content__text {
+  margin-top: 27px;
+}
+
+
+
+.people1 {
+  background-image: url("/static/images/people-1.png");
+}
+
+.people2 {
+  background-image: url("/static/images/people-2.png");
 }
 
 /* Card */
