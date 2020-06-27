@@ -1,6 +1,6 @@
 @media (min-width: 1025px) {
     /* Common content width */
-    .navbar,
+    .navbar__wrapper,
     .cart__container,
     .some-products__container,
     .products,
@@ -28,6 +28,11 @@
     .create-product__form {
         max-width: 574px;
         margin: auto;
+    }
+
+    /* About */
+    .about__people__text {
+        width: 60%;
     }
 
     /* Accounts */

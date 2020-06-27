@@ -18,7 +18,7 @@ html {
   line-height: 29px;
 }
 
-.navbar,
+.navbar__wrapper,
 .cart__container,
 .some-products__container,
 .products,
@@ -36,7 +36,7 @@ p {
   font-weight: 400;
   font-family: 'Lora', serif;
   color: #6d6a6a;
-  font-size: 1;
+  font-size: 1.1em;
 }
 
 input {
@@ -127,6 +127,21 @@ img {
   letter-spacing: .1em;
   font-family: 'Playfair Display', serif;
   text-transform: uppercase;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.navbar-brand-logo {
+  display: inline-block
+}
+
+.cat {
+  color: #91ab40;
+}
+
+.catcus-logo {
+  width: 50px;
+  height: auto;
 }
 
 .navbar-nav {
@@ -140,6 +155,7 @@ img {
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: .1em;
+  vertical-align: middle;
 }
 
 .underline {
@@ -147,25 +163,16 @@ img {
   position: relative;
   overflow: hidden;
 }
-.underline:after {
-  content: "";
+.underline:before {
+  content: '';
+  height: 1px;
+  background-color: currentColor;
   position: absolute;
-  z-index: -1;
-  right: 0;
-  width: 0;
-  bottom: -5px;
-  background: #000;
-  height: 4px;
-  transition-property: width;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-out;
-}
-.underline:hover:after,
-.underline:focus:after,
-.underline:active:after {
+  bottom: 2px;
   left: 0;
-  right: auto;
-  width: 100%;
+  width: 0;
+  margin: auto;
+  transition: width .2s ease-in-out;
 }
 
 .nav-item i {
@@ -211,14 +218,13 @@ img {
   padding: 30px 0;
 }
 
-.service__content__container {
+.service__container {
   text-align: center;
 }
 
 
 /* About */
 .about__content {
-  width: 90%;
   margin: auto;
   padding: 30px 0;
   text-align: left;
@@ -226,8 +232,6 @@ img {
 
 .about-card {
   padding: 20px 15px;
-  /* background: #ffffff;
-  border: 2px solid #f0f0f0; */
   margin: 15px 0;
   display: inline-block;
 }
@@ -276,11 +280,12 @@ img {
 }
 .about__people__card__text h6 {
   margin: 18px 0 0;
-  font-size: 1.3rem;
+  font-size: 1.1em;
 }
 
 .about__people__card__text p {
   font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
 }
 
 /* Card */
@@ -317,7 +322,7 @@ img {
 }
 
 .card__img:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .card__body {
@@ -449,6 +454,20 @@ img {
 .error-emptycart {
   text-align: center;
   min-height: calc(100vh - 130px);
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  height: 100%;
+}
+
+.error-emptycart__content_wrapper {
+  display: flex;
+  flex-grow: 1;
+  align-self: center;
+}
+
+.error-emptycart__content_wrapper2 {
+  margin: auto;
 }
 
 .error-emptycart__subtitle,

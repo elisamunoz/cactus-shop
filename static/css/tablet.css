@@ -14,6 +14,11 @@
         padding: 40px 20px;
     }
 
+    .about__people__text {
+        margin: 2rem auto;
+        width: 80%;
+    }
+
     .about__people__card {
         display: inline-block;
         margin: 0px 50px;
