@@ -8,20 +8,22 @@
                     <div class="wrapper card_wrapper col-12 col-md-6 col-lg-3">
                         <!-- Card image -->
                         <article class="card">
-                            <div class="card__img-wrapper">
-                                <a href="{% url 'product_detail' product.id %}"><div class="card__img" style="background-image: url('{{ product.image.url }}');"></div></a>
-                            </div>
-                        <!-- Card text -->
-                            <div class="card__body">
-                                <div class="card__body__header">
-                                <div class="card__body__header__text">
-                                    <h4 class="card__body__header__name">{{ product.name}}</h4>
-                                    <h5>€{{ product.price }}</h6>
-                                    <p>{{ product.snippet }}</p>
+                            <a href="{% url 'product_detail' product.id %}">
+                                <div class="card__img-wrapper">
+                                    <div class="card__img" style="background-image: url('{{ product.image.url }}');"></div>
                                 </div>
-                                    <a class="button button-block" href="{% url 'product_detail' product.id %}">Read More</a>
+                                <!-- Card text -->
+                                <div class="card__body">
+                                    <div class="card__body__header">
+                                    <div class="card__body__header__text">
+                                        <h4 class="card__body__header__name">{{ product.name}}</h4>
+                                        <h5>€{{ product.price }}</h6>
+                                        <p>{{ product.snippet }}</p>
+                                    </div>
+                                        <a class="button button-block" href="{% url 'product_detail' product.id %}">Read More</a>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </article>
                     </div>
     
