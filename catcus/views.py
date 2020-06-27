@@ -9,4 +9,4 @@ def about(request):
     return render(request, 'about.html')
 
 def error_page(request):
-    return render(request, 'error_page.html')
+    return render(request, '404.html')
