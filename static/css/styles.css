@@ -21,7 +21,7 @@ html {
 .navbar,
 .cart__container,
 .some-products__container,
-.shop,
+.products,
 .about__content,
 .checkout {
     max-width: 690px;
@@ -36,7 +36,7 @@ p {
   font-weight: 400;
   font-family: 'Lora', serif;
   color: #6d6a6a;
-  font-size: 1.1rem;
+  font-size: 1;
 }
 
 input {
@@ -66,6 +66,11 @@ textarea {
   min-height: calc(100vh - 130px);
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 .background-image {
   width: 100%;
   display: block;
@@ -78,13 +83,14 @@ textarea {
   padding: 40px 0 30px;
   text-align: center;
   font-family: 'Playfair Display', serif; 
-  font-size: 38px;
+  font-size: 50px;
 }
 
 .section__subtitle {
   font-family: playfair display, serif;
   font-size: 30px;
   margin: 19px 0;
+  line-height: 1.4em;
 }
 
 
@@ -128,7 +134,7 @@ textarea {
   font-size: 14px;
 }
 
-.navbar-expand-lg .navbar-nav .nav-link {
+.navbar-expand-xl .navbar-nav .nav-link {
   padding-right: 25px;
   padding-left: 25px;
   font-weight: 500;
@@ -246,25 +252,35 @@ textarea {
 .about__text h5 {
   margin-top: 15px;
 }
-/* 
-.about__content__image__container {
-  position: relative;
-  width: 100%;
-  height: auto;
-} */
 
 .about__content__text {
   margin-top: 27px;
 }
 
-
-
-.people1 {
-  background-image: url("/static/images/people-1.png");
+.about__content__image {
+  margin: 19px 0;
 }
 
-.people2 {
-  background-image: url("/static/images/people-2.png");
+.about__people {
+  text-align: center;
+}
+
+.about__people__text {
+  margin: 2rem 0;
+}
+
+.about__people__card__image {
+  width: 222px;
+  margin: auto;
+
+}
+.about__people__card__text h6 {
+  margin: 18px 0 0;
+  font-size: 1.3rem;
+}
+
+.about__people__card__text p {
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* Card */
@@ -430,18 +446,33 @@ textarea {
 
 
 /* Error page - Empty cart */
-.error-emptycart{
-  background-image: url("/static/images/error-emptycart.jpg");
+.error-emptycart {
+  text-align: center;
   min-height: calc(100vh - 130px);
 }
-.error-emptycart__txt {
+
+.error-emptycart__subtitle,
+.error-emptycart__p  
+.error-emptycart__button {
   text-align: center;
-  padding-top: 60px;
 }
 
-.error-emptycart__txt h1 {
-  margin-bottom: 40px;
+.error-emptycart__title {
+  padding: 20px 0;
 }
+
+.error-emptycart__subtitle {
+  margin: 20px 0;
+}
+
+.error-emptycart__p {
+  margin: 20px 0;
+}
+
+.error-emptycart__button {
+  margin-top: 35px;
+}
+
 
 /* Footer */
 

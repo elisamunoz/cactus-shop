@@ -2,13 +2,12 @@
 
 {% block content %}
 {% if product_count == 0 %}
-<div class="background-image error-emptycart">
-    <div class="error-emptycart__txt">
-        <h1>Your  cart is currently empty</h1>
+<div class="error-emptycart">
+    <h3 class="section__subtitle error-emptycart__subtitle">Your  cart is currently empty</h3>
+    <div class="error-emptycart__button">
         <a class="button" href="{% url 'products_list' %}">Return to Shop</a>
     </div>
 </div>
-
 {% else %}
     <section class="cart">
         <div class="cart__container">

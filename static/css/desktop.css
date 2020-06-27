@@ -3,10 +3,10 @@
     .navbar,
     .cart__container,
     .some-products__container,
-    .shop,
+    .products,
     .about__content,
     .checkout {
-        max-width: 1100px;
+        max-width: 1300px;
         margin: auto;
     }
 
@@ -14,6 +14,10 @@
     .carousel__img {
         width: 100%;
         height: auto;
+    }
+
+    .about__people {
+        padding: 60px 0;
     }
   
     /* Products */

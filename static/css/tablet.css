@@ -6,10 +6,19 @@
       }
 
       /* About url */
+    .about__content__image {
+        margin: 30px 0;
+    }
+
     .about-card {   
         padding: 40px 20px;
     }
-    
+
+    .about__people__card {
+        display: inline-block;
+        margin: 0px 50px;
+    }
+
     /* Product detail url */
     .product__detail__img {
         height: 600px;
