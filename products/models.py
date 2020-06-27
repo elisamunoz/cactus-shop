@@ -13,4 +13,4 @@ class Product(models.Model):
         return self.name
 
     def snippet(self):
-        return self.description[:40] + '...'
+        return self.description[:50] + '...'
