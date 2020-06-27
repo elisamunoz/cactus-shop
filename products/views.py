@@ -20,7 +20,7 @@ def product_detail(request, pk):
         return render(request, "productdetail.html", {"product": product})
     
     except Exception:
-        return redirect('error_page')
+        return redirect('404')
 
 
 @user_passes_test(lambda u: u.is_superuser)
