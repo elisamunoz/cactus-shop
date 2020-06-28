@@ -265,6 +265,14 @@ footer {
   text-align: center;
 }
 
+.about__people__container {
+  padding-top: 50px;
+}
+
+.about__people__subtitle {
+  margin: 0 0 19px;
+}
+
 .about__people__text {
   margin: 2rem 0;
 }
