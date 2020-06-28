@@ -107,7 +107,6 @@ img {
 }
 
 /* General colors */
-.navbar__wrapper,
 .about,
 .shop,
 .account-content,
@@ -117,11 +116,15 @@ img {
   background-color: #fdfdfd;
 }
 
-.about__people,
-footer {
+.service,
+.about__people {
   background-color:#fefaf3;
 }
 
+.navbar__wrapper,
+footer {
+  background: #fafaf9;
+}
 
 /* Menu */
 
@@ -210,8 +213,7 @@ footer {
 }
 
 .service {
-  padding: 30px 0;
-  background-color: #fefaf3;
+  padding: 90px 0;
 }
 
 .service__container {
@@ -220,9 +222,12 @@ footer {
 
 
 /* About */
+.about {
+  padding: 90px;
+}
+
 .about__content {
   margin: auto;
-  padding: 30px 0;
   text-align: left;
 }
 
@@ -230,10 +235,12 @@ footer {
   padding: 20px 15px;
   margin: 15px 0;
   display: inline-block;
+  text-align: center;
 }
 
 .about-card__icon {
   font-size: 40px;
+  color: #e06e4f;
 }
 
 .about-card__text {
@@ -242,6 +249,7 @@ footer {
 
 .about-card__text h5 {
   font-size: 1.1rem;
+  padding: 20px 0 10px;
 }
 
 .about__text {
@@ -263,10 +271,7 @@ footer {
 
 .about__people {
   text-align: center;
-}
-
-.about__people__container {
-  padding-top: 50px;
+  padding: 90px 0;
 }
 
 .about__people__subtitle {
@@ -292,7 +297,30 @@ footer {
   font-size: 1em;
 }
 
-/* Card */
+/* Products */
+.some-products {
+  padding: 90px 0;
+}
+
+.shop { 
+  padding: 90px 0;
+}
+
+.product-description__content {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  height: 100%;
+  min-height: calc(100vh - 130px);
+  margin: auto;
+}
+
+.product-description__content__wrapper {
+  display: flex;
+  flex-grow: 1;
+  align-self: center;
+}
+
 .card {
   position: relative;
   margin: 10px auto;
@@ -409,6 +437,10 @@ footer {
 }
 
 /* Cart */
+.cart {
+  min-height: calc(100vh - 135px);
+}
+
 .cart__table {
   width: 100%;
 }
@@ -443,6 +475,10 @@ footer {
 
 /* Checkout */
 
+.checkout {
+  padding: 90px 0;
+}
+
 .checkout__order {
   width: 100%;
 }
@@ -452,6 +488,7 @@ footer {
 }
 
 .submit_payment_btn {
+  margin: 0;
   margin-top: 25px;
 }
 
@@ -508,6 +545,6 @@ footer {
 
 .social-links {
   margin: auto;
-  padding: 8px 0;
+  padding: 5px 0;
   color: #f34f3f;
 }
