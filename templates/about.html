@@ -1,17 +1,53 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load static %}
 <!-- About -->
 <section class="about">
-    <div class="background-image background-image__about">
-        <div class="about__content">
-            <h1 class="section__title">About</h1>
-            <p>At Catcus, we have something for everyone, whether you are a beginner who wants to start out with a few small pots and trays on your windowsill, the 'green fingered' expert or professional landscape gardener, we have the tools for you.
-            <br>
-            <br>
-            If you have any questions about us, our products or need help with your garden please get in touch with us via our contact us page. There is always someone on hand to take your questions and experts to offer you gardening advice.</p>
+    <div class="container about__content">
+        <h1 class="section__title">About Us</h1>
+        <div class="row">
+            <div class="col-12 col-xl-6">
+                <h3 class="section__subtitle">We take plants personally & we bring you happiness</h3>
+                <p class ="about__content__text">At Catcus, we have something for everyone, whether you are a beginner who wants to start out with a few small pots and trays on your windowsill, the 'green fingered' expert or professional landscape gardener, we have the tools for you.
+                    <br>
+                    <br>
+                If you have any questions about us, our products or need help with your garden please get in touch with us via our contact us page. There is always someone on hand to take your questions and experts to offer you gardening advice.</p>
+            </div>
+            <!-- <div class="about__content__image__container"> -->
+            <div class="col-12 col-xl-6 about__content__image">
+                <!-- <img src="{% static 'images/about.jpg' %}" alt="Our offices with plants and our cat Bigotes"> -->
+                <img src="/static/images/about.jpg" alt="">
+            </div>
+            <!-- </div> -->
+        </div>
+        <div class="about__people">
+            <div>
+                <h3 class="section__subtitle about__people__subtitle">Plant Experts</h3>
+                <p class="about__people__text">A perfect blend of creativity, energy, communication, happiness and love. Let us arrange a smile for you.</p>
+            </div>
+            <div>
+                <div class="about__people__card">
+                    <div class="about__people__card__image">
+                        <img src="/static/images/team-1.png" alt="Image of Michaela Patton, our Manager and Gardener">
+                    </div>
+                    <div class="about__people__card__text">
+                        <h6>Michaela Patton</h6>
+                        <p>Manager - Gardener</p>
+                    </div>
+                </div>
+                <div class="about__people__card">
+                    <div class="about__people__card__image">
+                        <img src="/static/images/team-2.png" alt="Image of Christina Cornell, Gardener">
+                    </div>
+                    <div class="about__people__card__text">
+                        <h6>Christina Cornell</h6>
+                        <p>Gardener</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    </div>
-  </section>
-  <!-- /About -->
-  {% endblock %}
+</div>
+</section>
+<!-- /About -->
+{% endblock %}

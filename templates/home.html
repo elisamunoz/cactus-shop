@@ -34,29 +34,27 @@
  
 <!-- Service -->
 <section class="service">
-  <div class="background-image background-image__service">
-    <div class="container service__content__container">
-      <div class="row">
-        <div class="about-card col-12 col-md-4">
-          <div class="about-card__icon"><i class="fas fa-truck"></i></div>
-          <div class="about-card__text">
-            <h5>FREE SHIPPING ON ORDERS OVER €75</h5>
-            <p>Deliver only in the Republic of Ireland</p>
-          </div>
+  <div class="container service__container">
+    <div class="row">
+      <div class="about-card col-12 col-md-4">
+        <div class="about-card__icon"><i class="fas fa-truck"></i></div>
+        <div class="about-card__text">
+          <h5>FREE SHIPPING ON ORDERS OVER €75</h5>
+          <p>Deliver only in the Republic of Ireland</p>
         </div>
-        <div class="about-card col-12 col-md-4">
-          <div class="about-card__icon"><i class="fas fa-phone-alt"></i></div>
-          <div class="about-card__text">
-            <h5>FREE DEDICATED SUPPORT</h5>
-            <p>Text us about what plants are better for your home</p>
-          </div>
+      </div>
+      <div class="about-card col-12 col-md-4">
+        <div class="about-card__icon"><i class="fas fa-phone-alt"></i></div>
+        <div class="about-card__text">
+          <h5>FREE DEDICATED SUPPORT</h5>
+          <p>Text us about what plants are better for your home</p>
         </div>
-        <div class="about-card col-12 col-md-4">
-          <div class="about-card__icon"><i class="fas fa-undo-alt"></i></div>
-          <div class="about-card__text">
-            <h5>MONEY BACK GUARANTEE</h5>
-            <p>If you are not happy with your purchase</p>
-          </div>
+      </div>
+      <div class="about-card col-12 col-md-4">
+        <div class="about-card__icon"><i class="fas fa-undo-alt"></i></div>
+        <div class="about-card__text">
+          <h5>MONEY BACK GUARANTEE</h5>
+          <p>If you are not happy with your purchase</p>
         </div>
       </div>
     </div>
@@ -72,7 +70,7 @@
       <!-- Product card -->
       <div id="cards" class="row">
         {% for product in products %}
-        <div class="wrapper col-12 col-md-6 col-xl-3 card_wrapper">
+        <div class="wrapper col-12 col-md-6 col-lg-3 card_wrapper">
           <article class="card">
             <a href="{% url 'product_detail' product.id %}">
               <div class="card__img-wrapper">

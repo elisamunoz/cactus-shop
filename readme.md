@@ -13,7 +13,7 @@ I used [Moqups](https://moqups.com/) to do the previous design of this project. 
 
 ### User Stories
 
-####“As a client I would like”:
+#### “As a client I would like”:
 
 - A website were I can shop plants to start my collection
 - A website were I can shop plants to make my collection bigger and bigger
@@ -22,14 +22,14 @@ I used [Moqups](https://moqups.com/) to do the previous design of this project. 
 - An online shop were I can securely pay for my products and forget about worrying
 - An online shop were apart from buying I also can learn something useful about the plants I am buying
 
-####“As a shop owner I need”#
+#### “As a shop owner I need”#
 
 - An appealing website to catch customers from the eye
 - A website were I can upload products and update prices without knowing any to code
 - A shop where the user can sign in, and sign up and feel more secure about payment
 
 
-###The sections of the website are:
+### The sections of the website are:
 
 ### Home:
 For this section I wanted to create a clean look, using light and bright colours. On this section I created a simple carousel to welcome the user to the shop.
@@ -148,6 +148,7 @@ Features were taken and modified from these websites:
 
 - Parallax effect: [Codepen Pen](https://codepen.io/corneliuslabuschagne/pen/rNaNgdB?editors=1000)
 - Images were taken from [Pixabay](https://www.pixabay.com)
+- Catcus logo taken from [Vecteezy](https://www.vecteezy.com/)
 - I took inspiration from [Pinterest](https://www.pinterest.com)
 
 

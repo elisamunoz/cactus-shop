@@ -17,7 +17,7 @@ urlpatterns = [
     url(r'^cart/', include('cart.urls')),
     url(r'checkout/', include(urls_checkout)),
     url(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT}),
-    url(r'^error/$', error_page, name='error_page'),
+    url(r'^404/$', error_page, name='404'),
 
 ]
 

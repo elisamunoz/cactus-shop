@@ -4,10 +4,18 @@ a:hover {
   text-decoration: none;
 }
 
+/* 
+font-family: 'Lora', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Playfair Display', serif; 
+*/
+
 body,
 html {
   height: 100%;
+  font-family: Montserrat, sans-serif;
   color: #1b1b1b;
+  line-height: 29px;
 }
 
 h1 {
@@ -16,6 +24,9 @@ h1 {
 
 p {
   font-weight: 400;
+  font-family: 'Lora', serif;
+  color: #6d6a6a;
+  font-size: 1.1em;
 }
 
 input {
@@ -42,7 +53,12 @@ textarea {
 }
 
 .site-content {
-  min-height: calc(100vh - 130px);
+  min-height: calc(100vh - 135px);
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
 
 .background-image {
@@ -55,9 +71,18 @@ textarea {
 
 .section__title {
   padding: 40px 0 30px;
-  text-transform: uppercase;
   text-align: center;
+  font-family: 'Playfair Display', serif; 
+  font-size: 50px;
 }
+
+.section__subtitle {
+  font-family: playfair display, serif;
+  font-size: 30px;
+  margin: 19px 0;
+  line-height: 1.4em;
+}
+
 
 .button {
   border: 0;
@@ -75,13 +100,31 @@ textarea {
   -webkit-appearance: none;
 }
 
-.button:hover, .button:focus {
+.button:hover, 
+.button:focus {
   background: #ff3d2a;
   color: #fff;
 }
 
+/* General colors */
+.navbar__wrapper,
+.about,
+.shop,
+.account-content,
+.error-emptycart,
+.cart,
+.checkout {
+  background-color: #fdfdfd;
+}
+
+.about__people,
+footer {
+  background-color:#fefaf3;
+}
+
 
 /* Menu */
+
 .navbar {
   min-height: 90px;
 }
@@ -90,7 +133,23 @@ textarea {
   font-size: 2.4rem;
   font-weight: 500;
   letter-spacing: .1em;
-  padding-left: 20px;
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.navbar-brand-logo {
+  display: inline-block
+}
+
+.cat {
+  color: #91ab40;
+}
+
+.catcus-logo {
+  width: 50px;
+  height: auto;
 }
 
 .navbar-nav {
@@ -98,17 +157,18 @@ textarea {
   font-size: 14px;
 }
 
-.navbar-expand-lg .navbar-nav .nav-link {
+.navbar-expand-xl .navbar-nav .nav-link {
   padding-right: 25px;
   padding-left: 25px;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: .1em;
+  vertical-align: middle;
 }
 
 .nav-item i {
   position: relative;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .badge-warning {
@@ -117,6 +177,10 @@ textarea {
   position: absolute;
   top: -4px;
   left: 11px;
+  color: #fff;
+  background-color: #f34f3f;
+  text-align: center;
+  padding-left: 6px;
 }
 
 /* Carousel */
@@ -147,30 +211,23 @@ textarea {
 
 .service {
   padding: 30px 0;
+  background-color: #fefaf3;
 }
 
-.service__content__container {
+.service__container {
   text-align: center;
 }
 
 
 /* About */
 .about__content {
-  width: 90%;
   margin: auto;
   padding: 30px 0;
-  text-align: center;
-}
-
-.background-image__about {
-  background-image: url("/images/about.jpg");
-  background-attachment: fixed;
+  text-align: left;
 }
 
 .about-card {
   padding: 20px 15px;
-  /* background: #ffffff;
-  border: 2px solid #f0f0f0; */
   margin: 15px 0;
   display: inline-block;
 }
@@ -196,12 +253,44 @@ textarea {
   margin-top: 15px;
 }
 
+.about__content__text {
+  margin-top: 27px;
+}
+
+.about__content__image {
+  margin: 19px 0;
+}
+
+.about__people {
+  text-align: center;
+}
+
+.about__people__text {
+  margin: 2rem 0;
+}
+
+.about__people__card__image {
+  width: 222px;
+  margin: auto;
+
+}
+.about__people__card__text h6 {
+  margin: 18px 0 0;
+  font-size: 1.1em;
+}
+
+.about__people__card__text p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+}
+
 /* Card */
 .card {
   position: relative;
   margin: 10px auto;
   max-width: 600px;
   border: none;
+  background-color: #fdfdfd;
 }
 
 .card_wrapper {
@@ -230,7 +319,7 @@ textarea {
 }
 
 .card__img:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .card__body {
@@ -248,28 +337,30 @@ textarea {
   width: 100%;
 }
 
-.card__body__header__text h5{
-  font-size: 1.2rem;
-}
-
 .card__body__header__name {
   line-height: 1.5;
   margin: 0 0 10px;
-  font-size: 1.3em;
+  font-size: 1.1em;
   text-transform: capitalize;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  color: #1b1b1b;
 }
 
-.button-block {
-  display: block;
-  /* width: 50%; */
-  margin: auto;
+.card__body__header__text h5 {
+  font-size: 1rem;
+  color: #505050;
 }
 
-/* Products */
+.card__body__header__text p {
+  margin-bottom: 12px;
+}
 
+.card__body__header__text__more:hover {
+  color: #ff3d2a;
+  font-weight: 600;
+}
 
 /* Product detail */
 
@@ -282,11 +373,32 @@ textarea {
   margin: auto;
 }
 
-.product__detail__button {
-  padding: 19px 18px;
-  border: 2px solid #1ab188;
+.product__detail__name {
+  padding: 25px 0;
 }
 
+.product__detail__price {
+  padding: 10px 0;
+  font-size: 1.2rem;
+}
+
+.product__detail__description {
+  white-space: pre-wrap;
+}
+
+.product__detail__form {
+  padding: 20px 0;
+}
+
+.quantity-form {
+  display: inline-block;
+  width: 58%;
+}
+
+.product__detail__form__button {
+  padding: 19px 18px;
+  width: 40%;
+}
 
 /* Cart */
 .cart__table {
@@ -331,21 +443,54 @@ textarea {
   margin: auto;
 }
 
+.submit_payment_btn {
+  margin-top: 25px;
+}
+
 
 
 /* Error page - Empty cart */
-.error-emptycart{
-  background-image: url("/static/images/error-emptycart.jpg");
-  min-height: calc(100vh - 130px);
-}
-.error-emptycart__txt {
+.error-emptycart {
   text-align: center;
-  padding-top: 60px;
+  min-height: calc(100vh - 135px);
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  height: 100%;
 }
 
-.error-emptycart__txt h1 {
-  margin-bottom: 40px;
+.error-emptycart__content_wrapper {
+  display: flex;
+  flex-grow: 1;
+  align-self: center;
 }
+
+.error-emptycart__content_wrapper2 {
+  margin: auto;
+}
+
+.error-emptycart__subtitle,
+.error-emptycart__p  
+.error-emptycart__button {
+  text-align: center;
+}
+
+.error-emptycart__title {
+  padding: 20px 0;
+}
+
+.error-emptycart__subtitle {
+  margin: 20px 0;
+}
+
+.error-emptycart__p {
+  margin: 20px 0;
+}
+
+.error-emptycart__button {
+  margin-top: 35px;
+}
+
 
 /* Footer */
 
@@ -356,4 +501,5 @@ footer {
 .social-links {
   margin: auto;
   padding: 8px 0;
+  color: #f34f3f;
 }

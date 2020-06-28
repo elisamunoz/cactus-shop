@@ -1,19 +1,12 @@
 @media (min-width: 1025px) {
-    /* Common content width */
-    .navbar,
-    .cart__container,
-    .some-products,
-    .shop,
-    .about__content,
-    .checkout {
-        max-width: 1100px;
-        margin: auto;
-    }
-
     /* Carousel */
     .carousel__img {
         width: 100%;
         height: auto;
+    }
+
+    .about__people {
+        padding: 60px 0;
     }
   
     /* Products */
@@ -24,6 +17,11 @@
     .create-product__form {
         max-width: 574px;
         margin: auto;
+    }
+
+    /* About */
+    .about__people__text {
+        width: 60%;
     }
 
     /* Accounts */

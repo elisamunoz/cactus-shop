@@ -1,30 +1,56 @@
 @media (min-width: 768px) {
+    /* Menu */
+    .underline {
+        position: relative;
+    }
+    .underline:before {
+        content: '';
+        position: absolute;
+        bottom: 12px;
+        left: 24px;
+        right: calc(100% - 24px);
+        height: 1px;
+        background: currentColor;
+        transition: right .3s ease-in;
+    }
+    .underline:hover:before {
+        right: 24px;
+    }
+
     /* Carousel  */
     .carousel__img {
         height: 100%;
-        /* margin: 0px -1100px; */
       }
 
       /* About url */
+    .about__content__image {
+        margin: 30px 0;
+    }
+
     .about-card {   
         padding: 40px 20px;
     }
+
+    .about__people__text {
+        margin: 2rem auto;
+        width: 80%;
+    }
+
+    .about__people__card {
+        display: inline-block;
+        margin: 0px 50px;
+    }
+
     /* Product detail url */
+    .product-description {
+        padding-top: 10px;
+    }
+
     .product__detail__img {
         height: 600px;
     }
 
-    .product__detail__button {
-        width: 40%;
-        display: inline-block;
-    }
-
     /* Cart */
-    .quantity-form {
-        display: inline-block;
-        width: 59%;
-    }
-
     .cart__table-category__img {
         display: block;
       }

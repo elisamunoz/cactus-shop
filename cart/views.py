@@ -34,7 +34,7 @@ def update_cart(request):
         return redirect(reverse('cart'))
 
     except Exception:
-        return redirect('error_page')
+        return redirect('404')
 
 
 @login_required
@@ -57,4 +57,4 @@ def add_to_cart(request, id):
         return redirect(reverse('products_list'))
         
     except Exception:
-        return redirect('error_page')
+        return redirect('404')

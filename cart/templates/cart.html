@@ -2,16 +2,19 @@
 
 {% block content %}
 {% if product_count == 0 %}
-<div class="background-image error-emptycart">
-    <div class="error-emptycart__txt">
-        <h1>Your  cart is currently empty</h1>
-        <a class="button" href="{% url 'products_list' %}">Return to Shop</a>
+<div class="error-emptycart">
+    <div class="container error-emptycart__content_wrapper">
+        <div class="error-emptycart__content_wrapper2">
+            <h3 class="section__subtitle error-emptycart__subtitle">Your  cart is currently empty</h3>
+            <div class="error-emptycart__button">
+                <a class="button" href="{% url 'products_list' %}">Return to Shop</a>
+            </div>
+        </div>
     </div>
 </div>
-
 {% else %}
     <section class="cart">
-        <div class="cart__container">
+        <div class="container cart__container">
             <h1 class="section__title">Cart</h1>
             <table class="cart__table">
                 <!-- Categories in shopping cart -->
