@@ -9,7 +9,7 @@ Code taken from Code Institute
 
 class MakePaymentForm(forms.Form):
 
-    MONTH_CHOICES = [(i, i) for i in range(1, 12)]
+    MONTH_CHOICES = [(i, i) for i in range(1, 13)]
     YEAR_CHOICES = [(i, i) for i in range(2020, 2036)]
 
     credit_card_number = forms.CharField(label='Credit card number', required=False)
