@@ -28,8 +28,8 @@
   </head>
   <body>
     <!-- Header -->
-    <section class="navbar__wrapper">
-      <nav class="navbar navbar-color navbar-expand-xl navbar-light">
+    <div class="navbar__wrapper">
+      <nav class="container navbar navbar-color navbar-expand-xl navbar-light">
         <a href="{% url 'home' %}">
           <div class="navbar-brand">
             <span class="cat">cat</span><span class="cus">cus</span>
@@ -70,7 +70,7 @@
           </div>
         </div>
       </nav>
-    </section>
+    </div>
 
     <!-- Messages -->
     {% if messages %}
@@ -95,7 +95,7 @@
     <!-- Footer-->
     <footer>
       <div class="container">
-        <ul class="list-inline social-links text-center col-sm-3">
+        <ul class="list-inline text-center col-sm-3 social-links">
           <li class="list-inline-item">
             <a target="_blank" href="https://github.com/elisamunoz">
               <i class="fab fa-github fa-footer" aria-hidden="true"></i>

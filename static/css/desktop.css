@@ -1,15 +1,4 @@
 @media (min-width: 1025px) {
-    /* Common content width */
-    .navbar__wrapper,
-    .cart__container,
-    .some-products__container,
-    .products,
-    .about__content,
-    .checkout {
-        max-width: 1300px;
-        margin: auto;
-    }
-
     /* Carousel */
     .carousel__img {
         width: 100%;
