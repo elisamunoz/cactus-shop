@@ -14,7 +14,7 @@ body,
 html {
   height: 100%;
   font-family: Montserrat, sans-serif;
-  color: #1b1b1b;
+  color: #413e2b;
   line-height: 29px;
 }
 
@@ -93,7 +93,7 @@ img {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: .1em;
-  background:#f34f3f;
+  background:#e06f51;
   color: #ffffff;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -102,32 +102,34 @@ img {
 
 .button:hover, 
 .button:focus {
-  background: #ff3d2a;
+  background: #ce893b;
   color: #fff;
 }
 
 /* General colors */
+.navbar__wrapper,
+footer {
+  background: #f5f5f5;
+}
+
+
+.some-products,
 .about,
 .shop,
 .account-content,
 .error-emptycart,
 .cart,
 .checkout {
-  background-color: #fdfdfd;
+  background-color: #fafafa;
 }
 
 .service,
 .about__people {
-  background-color:#fefaf3;
-}
-
-.navbar__wrapper,
-footer {
-  background: #fafaf9;
+  /* background-color:#f1e7dd; */
+  background: #f8eadf;
 }
 
 /* Menu */
-
 .navbar {
   min-height: 90px;
 }
@@ -147,7 +149,7 @@ footer {
 }
 
 .cat {
-  color: #91ab40;
+  color: #e06f51;
 }
 
 .catcus-logo {
@@ -181,7 +183,7 @@ footer {
   top: -4px;
   left: 11px;
   color: #fff;
-  background-color: #f34f3f;
+  background-color: #e06f51;
   text-align: center;
   padding-left: 6px;
 }
@@ -223,7 +225,7 @@ footer {
 
 /* About */
 .about {
-  padding: 90px;
+  padding: 90px 0;
 }
 
 .about__content {
@@ -240,7 +242,7 @@ footer {
 
 .about-card__icon {
   font-size: 40px;
-  color: #e06e4f;
+  color: #2c4a4a;
 }
 
 .about-card__text {
@@ -326,7 +328,7 @@ footer {
   margin: 10px auto;
   max-width: 600px;
   border: none;
-  background-color: #fdfdfd;
+  background-color: #fafafa;
 }
 
 .card_wrapper {
@@ -384,7 +386,7 @@ footer {
   color: #1b1b1b;
 }
 
-.card__body__header__text h5 {
+.card__body__header__text__price {
   font-size: 1rem;
   color: #505050;
 }
@@ -393,8 +395,13 @@ footer {
   margin-bottom: 12px;
 }
 
+.card__body__header__text__more {
+  color: #e06f51;
+  font-size: 1.1rem;
+}
+
 .card__body__header__text__more:hover {
-  color: #ff3d2a;
+  color: #ce893b;
   font-weight: 600;
 }
 
@@ -546,5 +553,8 @@ footer {
 .social-links {
   margin: auto;
   padding: 5px 0;
-  color: #f34f3f;
+}
+
+.fa-footer {
+  color: #2c4a4a;
 }

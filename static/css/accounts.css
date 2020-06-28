@@ -32,6 +32,14 @@
     font-family: 'Lora', serif;
 }
 
+.account__button {
+    background: #413e2b;
+}
+
+.here {
+    color: #e06f51; 
+}
+
 .account__img {
     flex: 0 0 50%;
     display: none;

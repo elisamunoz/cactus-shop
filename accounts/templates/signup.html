@@ -9,8 +9,8 @@
         <form action="{% url 'accounts:signup' %}" method="post" class="">
             {% csrf_token %}
             {{form}}
-            <input type="submit" class="button" value="Sign up">
-            <p>You have already signed up? Sign in <a href="{% url 'accounts:signin' %}">here</a></p>
+            <input type="submit" class="button account__button" value="Sign up">
+            <p>You have already signed up? Sign in <a class="here" href="{% url 'accounts:signin' %}">here</a></p>
         </form>
       </div>
     </div>
