@@ -7,6 +7,6 @@ app_name ='accounts'
 urlpatterns = [
     url(r'^signup/$', signup_view, name="signup"),
     url(r'^profile/$', profile_view, name='profile'),
-    url(r'^signin/$', signin_view, name="signin"),
+    url(r'^login/$', signin_view, name="signin"),
     url(r'^logout/$', logout_view, name="logout")
 ]
