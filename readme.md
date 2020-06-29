@@ -148,6 +148,7 @@ Features were taken and modified from these websites:
 
 - Parallax effect: [Codepen Pen](https://codepen.io/corneliuslabuschagne/pen/rNaNgdB?editors=1000)
 - Images were taken from [Pixabay](https://www.pixabay.com)
+- Most of the text and plan images were taken from the online store [Gardens4You](https://www.gardens4you.ie/)
 - Catcus logo taken from [Vecteezy](https://www.vecteezy.com/)
 - I took inspiration from [Pinterest](https://www.pinterest.com)
 

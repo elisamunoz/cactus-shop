@@ -188,6 +188,10 @@ footer {
   padding-left: 6px;
 }
 
+.alert {
+  margin: 0;
+}
+
 /* Carousel */
 .home {
   height: 57vh;
