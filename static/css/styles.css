@@ -106,6 +106,9 @@ img {
   color: #fff;
 }
 
+.hidden {
+  display: none;
+}
 /* General colors */
 .navbar__wrapper,
 footer {
@@ -463,6 +466,13 @@ footer {
 .input-group-addon {
   padding-top: 6px;
   padding-left: 6px;
+}
+
+.field-qty {
+  flex-grow: unset;
+  width: 68px;
+  border-radius: 4px;
+  margin: 0 0 -15px;
 }
 
 .cart__update__button,
