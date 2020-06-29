@@ -9,7 +9,7 @@ My goal is to create a user-friendly, fully functional and appealing eCommerce. 
 
 ![Home section](https://github.com/elisamunoz/birdsongs-project/blob/master/assets/images/mockup-images/multi-device-mockup.png)
 
-I used [Moqups](https://moqups.com/) to do the previous design of this project. [Here is the link for the mockups](https://github.com/elisamunoz/birdsongs-project/tree/master/assets/images/mockup-images).
+I used [Moqups](https://moqups.com/) to do the previous design of this project. [Here is the link for the mockups](https://github.com/elisamunoz/cactus-shop/tree/master/static/images/mockups).
 
 ### User Stories
 
@@ -19,14 +19,14 @@ I used [Moqups](https://moqups.com/) to do the previous design of this project. 
 - A website were I can shop plants to make my collection bigger and bigger
 - A website were I can see trendy plants because I like to get what somebody else are getting 
 - An online shop where I can get plants delivered in Ireland
-- An online shop were I can securely pay for my products and forget about worrying
+- An online shop were I can securely pay for my products and feel safe after paying online
 - An online shop were apart from buying I also can learn something useful about the plants I am buying
 
 #### “As a shop owner I need”#
 
 - An appealing website to catch customers from the eye
-- A website were I can upload products and update prices without knowing any to code
-- A shop where the user can sign in, and sign up and feel more secure about payment
+- A website were I can upload products and update prices so I don't need to know any code
+- A shop where the user can sign in, and sign up, so de users feel more secure about payment
 
 
 ### The sections of the website are:
