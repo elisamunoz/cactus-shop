@@ -57,10 +57,11 @@ This section will show the latest 4 - 8 plants the shop owner uploads to the dat
 - Google Fonts: to get fonts
 
 ### Backend 
-- Django (1.11): ************************
+- Django (1.11): To create the apps that make this website
+- PostgreSQL: it is used for database
 
 ### Hosting
-- Github: to host the code project ************
+- Github: for version control of project code.
 - S3 Buckets from AWS: to host images and static files including CSS and Javascript
 - Heroku: to host the live view of this ptoject
 
@@ -86,6 +87,8 @@ This section will show the latest 4 - 8 plants the shop owner uploads to the dat
 - Google Developer Tool: I used this tool to check every change I made on the code to check functionality and responsivenes in diferent device sizes
 - [W3C Markup Validation Service](https://validator.w3.org/): I validated the HTML code using this validator. W3C Markup Validator does not recognize Django code as valid so I got errors pointing at them, 
 - [CSS Validation Service](https://jigsaw.w3.org/css-validator/): I validated the CSS code using this validator.
+- I used TestCase to test the Product app, to run it, it is necessary to run the following command in the terminal:
+`$ python manage.py test`
 
 
 
