@@ -106,6 +106,9 @@ img {
   color: #fff;
 }
 
+.hidden {
+  display: none;
+}
 /* General colors */
 .navbar__wrapper,
 footer {
@@ -195,6 +198,25 @@ footer {
 /* Carousel */
 .home {
   height: 57vh;
+}
+
+.carousel-inner {
+  position: relative;
+}
+
+.carousel__text {
+  position: absolute;
+  top: calc(50% - 90px);
+  z-index: 2;
+  font-family: 'Playfair Display', serif; 
+  max-width: 240px;
+  padding:20px;
+  
+}
+
+.carousel__text__subtitle {
+  display: none;
+  font-family: 'Lora', serif;
 }
 
 .carousel.slide {
@@ -465,6 +487,13 @@ footer {
   padding-left: 6px;
 }
 
+.field-qty {
+  flex-grow: unset;
+  width: 68px;
+  border-radius: 4px;
+  margin: 0 0 -15px;
+}
+
 .cart__update__button,
 .cart__table__checkout {
   margin-top: 15px;
@@ -513,7 +542,9 @@ footer {
   flex-direction: row;
   align-items: stretch;
   height: 100%;
+  position: relative;
 }
+
 
 .error-emptycart__content_wrapper {
   display: flex;
@@ -545,6 +576,15 @@ footer {
 
 .error-emptycart__button {
   margin-top: 35px;
+}
+.error-emptycart__button__image {
+  background-image: url(/static/images/error_emptycart.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  height: 195px;
+  margin: auto;
 }
 
 

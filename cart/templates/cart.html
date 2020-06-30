@@ -9,6 +9,7 @@
             <div class="error-emptycart__button">
                 <a class="button" href="{% url 'products_list' %}">Return to Shop</a>
             </div>
+            <div class="error-emptycart__button__image"></div>
         </div>
     </div>
 </div>
@@ -38,7 +39,7 @@
                                     <label for="{{item.quantity}}" class="sr-only">New Qty</label>
                                     <div class="input-group">
                                         <div class="input-group-addon"></div>
-                                        <input name="{{item.id}}" id="{{item.id}}" type="number" min="0" max="100" class="form-control" value="{{item.quantity}}" >
+                                        <input name="{{item.id}}" id="{{item.id}}" type="number" min="0" max="100" class="form-control field-qty" value="{{item.quantity}}" >
                                     </div>
                                 </div>
                         </td>

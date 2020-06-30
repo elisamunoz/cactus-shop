@@ -2,13 +2,27 @@
 
 // }
 
-
 // $(function(){
 //     $("#payment-form").submit(submitForm)
 // })
 
+function showErrors(message) {
+    const messageArea = $("#message-error");
+    messageArea.text(message);
+    messageArea.show();
+};
+function hideErrors() {
+    const messageArea = $("#message-error");
+    messageArea.hide();
+};
+
 $(function() {
     $("#payment-form").submit(function() {
+        const btnSubmit = $("#submit_payment_btn");
+
+        // Prevent double-click
+        btnSubmit.attr("disabled", true);
+
         var form = this;
         var card = {
             number: $("#id_credit_card_number").val(),
@@ -16,10 +30,12 @@ $(function() {
             expYear: $("#id_expiry_year").val(),
             cvc: $("#id_cvv").val()
         };
-    
+
     Stripe.createToken(card, function(status, response) {
+        btnSubmit.attr("disabled", false);
+
         if (status === 200) {
-            $("#credit-card-errors").hide();
+            hideError();
             $("#id_stripe_id").val(response.id);
 
             // Prevent the credit card details from being submitted
@@ -31,9 +47,7 @@ $(function() {
 
             form.submit();
         } else {
-            $("#stripe-error-message").text(response.error.message);
-            $("#credit-card-errors").show();
-            $("#validate_card_btn").attr("disabled", false);
+            showErrors(response.error.message);
         }
     });
     return false;
