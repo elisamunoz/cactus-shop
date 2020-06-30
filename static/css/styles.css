@@ -200,6 +200,25 @@ footer {
   height: 57vh;
 }
 
+.carousel-inner {
+  position: relative;
+}
+
+.carousel__text {
+  position: absolute;
+  top: calc(50% - 90px);
+  z-index: 2;
+  font-family: 'Playfair Display', serif; 
+  max-width: 240px;
+  padding:20px;
+  
+}
+
+.carousel__text__subtitle {
+  display: none;
+  font-family: 'Lora', serif;
+}
+
 .carousel.slide {
   margin: auto;
   width:100%;
