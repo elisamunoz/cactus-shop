@@ -1,12 +1,14 @@
 /** General paddings, margins, styles **/
 :root {
   --color-main: #fff;
-  --color-main-light: ;
+  --color-sections: #f8f7f5;
   --color-text: #333333;
   --color-text-light: #6d6a6a;
-  --color-sections: ;
-  --color-buttons: ;
-  --color-table-line: ;
+  --color-buttons: #367978;
+  --color-buttons-hover: #388584;
+  --color-table-line: #e8e8e8;
+  --color-icons: #e06f51;
+  --color-underline: #ffb293;
 }
 
 *,
@@ -35,7 +37,7 @@ h1 {
 p {
   font-weight: 400;
   font-family: 'Lora', serif;
-  color: var(--color-text--light);
+  color: var(--color-text-light);
   font-size: 1.1em;
 }
 
@@ -48,7 +50,7 @@ input {
 }
 
 tr {
-  border-bottom: 1px solid #e8e8e8;
+  border-bottom: 1px solid var(--color-table-line)
 }
 
 th,
@@ -104,8 +106,8 @@ img {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: .1em;
-  background:#e06f51;
-  color: #ffffff;
+  background:var(--color-buttons);
+  color: var(--color-main);
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   -webkit-appearance: none;
@@ -113,37 +115,23 @@ img {
 
 .button:hover, 
 .button:focus {
-  background: #ce893b;
-  color: #fff;
+  background: var(--color-buttons-hover);
+  color: var(--color-main);
 }
 
 .hidden {
   display: none;
 }
 /* General colors */
-.navbar__wrapper,
-footer {
-  background: #f5f5f5;
-}
-
-
-.some-products,
-.about,
-.shop,
-.account-content,
-.error-emptycart,
-.cart,
-.checkout {
-  /* background-color: #fafafa; */
-}
-
-.service,
 .about__people {
-  /* background-color:#f1e7dd; */
-  background: #f8eadf;
+  background: var(--color-sections);
 }
 
 /* Menu */
+.navbar__wrapper {
+  background: var(--color-main);
+}
+
 .navbar {
   min-height: 90px;
 }
@@ -163,7 +151,7 @@ footer {
 }
 
 .cat {
-  color: #e06f51;
+  color: var(--color-icons);
 }
 
 .catcus-logo {
@@ -196,8 +184,8 @@ footer {
   position: absolute;
   top: -4px;
   left: 11px;
-  color: #fff;
-  background-color: #e06f51;
+  color: var(--color-main);
+  background-color: var(--color-icons);
   text-align: center;
   padding-left: 6px;
 }
@@ -208,35 +196,75 @@ footer {
 
 /* Home */
 .home {
-  height: 57vh;
+  height: 70vh;
 }
 
 .home_image {
   background-image: url("/static/images/home.jpg");
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  height: 100%;
+  min-height: 70vh;
+  max-width: 100%;
+  margin: auto;
+}
+
+.home_image_wrapper {
+  display: flex;
+  flex-grow: 1;
+  align-self: center;
 }
 
 .home__text {
-  position: absolute;
-  top: calc(50% - 90px);
-  z-index: 2;
-  font-family: 'Playfair Display', serif; 
-  max-width: 240px;
+  color: var(--color-main);
+  font-size: 23px;
+  text-align: left;
+  line-height: 85px;
+  letter-spacing: 0px;
+  max-width: 90%;
+  margin: auto;
+  font-weight: 300;
+  
 }
 
 .home__text__subtitle {
-  font-family: 'Lora', serif;
+  margin-top: 20px;
+  line-height: 33px;
+  font-size: 18px;
 }
 
 
 /* Our services */
 .service {
   padding: 90px 0;
-  background-image: url(https://sunnyorchard.qodeinteractive.com/wp-content/uploads/2019/10/h1-background-2-2.jpg);
+  background-image: url("/static/images/service.jpg");
   background-size: contain;
 }
 
 .service__container {
   text-align: center;
+}
+
+.service-card {
+  padding: 20px 15px;
+  margin: 15px 0;
+  display: inline-block;
+  text-align: center;
+}
+
+.service-card__icon {
+  font-size: 40px;
+  color: var(--color-text);
+}
+
+.service-card__text {
+  padding-top: 15px;
+}
+
+.service-card__text h5 {
+  font-size: 1.1rem;
+  padding: 20px 0 10px;
 }
 
 
@@ -248,27 +276,6 @@ footer {
 .about__content {
   margin: auto;
   text-align: left;
-}
-
-.about-card {
-  padding: 20px 15px;
-  margin: 15px 0;
-  display: inline-block;
-  text-align: center;
-}
-
-.about-card__icon {
-  font-size: 40px;
-  color: #2c4a4a;
-}
-
-.about-card__text {
-  padding-top: 15px;
-}
-
-.about-card__text h5 {
-  font-size: 1.1rem;
-  padding: 20px 0 10px;
 }
 
 .about__text {
@@ -345,7 +352,6 @@ footer {
   margin: 10px auto;
   max-width: 600px;
   border: none;
-  background-color: #fafafa;
 }
 
 .card_wrapper {
@@ -405,7 +411,7 @@ footer {
 
 .card__body__header__text__price {
   font-size: 1rem;
-  color: #505050;
+  color: var(--color-text-light);
 }
 
 .card__body__header__text p {
@@ -413,13 +419,13 @@ footer {
 }
 
 .card__body__header__text__more {
-  color: #e06f51;
+  color: var(--color-icons);
   font-size: 1.1rem;
 }
 
 .card__body__header__text__more:hover {
-  color: #ce893b;
-  font-weight: 600;
+  color: var(--color-text-light);
+  font-weight: 500;
 }
 
 /* Product detail */
@@ -583,6 +589,7 @@ footer {
 
 footer {
   height: 40px;
+  background: var(--color-main);
 }
 
 .social-links {
@@ -591,5 +598,5 @@ footer {
 }
 
 .fa-footer {
-  color: #2c4a4a;
+  color: var(--color-text);
 }

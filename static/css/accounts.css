@@ -33,11 +33,15 @@
 }
 
 .account__button {
-    background: #413e2b;
+    background: var(--color-buttons);
+}
+
+.account__button:hover {
+    background: var(--color-buttons-hover);
 }
 
 .here {
-    color: #e06f51; 
+    color:var(--color-icons); 
 }
 
 .account__img {
