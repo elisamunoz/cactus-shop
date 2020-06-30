@@ -1,4 +1,14 @@
 /** General paddings, margins, styles **/
+:root {
+  --color-main: #fff;
+  --color-main-light: ;
+  --color-text: #333333;
+  --color-text-light: #6d6a6a;
+  --color-sections: ;
+  --color-buttons: ;
+  --color-table-line: ;
+}
+
 *,
 a:hover {
   text-decoration: none;
@@ -14,7 +24,7 @@ body,
 html {
   height: 100%;
   font-family: Montserrat, sans-serif;
-  color: #413e2b;
+  color: var(--color-text);
   line-height: 29px;
 }
 
@@ -25,7 +35,7 @@ h1 {
 p {
   font-weight: 400;
   font-family: 'Lora', serif;
-  color: #6d6a6a;
+  color: var(--color-text--light);
   font-size: 1.1em;
 }
 
@@ -63,6 +73,7 @@ img {
 
 .background-image {
   width: 100%;
+  height: 100%;
   display: block;
   background-size: cover;
   background-position: center;
@@ -123,7 +134,7 @@ footer {
 .error-emptycart,
 .cart,
 .checkout {
-  background-color: #fafafa;
+  /* background-color: #fafafa; */
 }
 
 .service,
@@ -195,53 +206,33 @@ footer {
   margin: 0;
 }
 
-/* Carousel */
+/* Home */
 .home {
   height: 57vh;
 }
 
-.carousel-inner {
-  position: relative;
+.home_image {
+  background-image: url("/static/images/home.jpg");
 }
 
-.carousel__text {
+.home__text {
   position: absolute;
   top: calc(50% - 90px);
   z-index: 2;
   font-family: 'Playfair Display', serif; 
   max-width: 240px;
-  padding:20px;
-  
 }
 
-.carousel__text__subtitle {
-  display: none;
+.home__text__subtitle {
   font-family: 'Lora', serif;
 }
 
-.carousel.slide {
-  margin: auto;
-  width:100%;
-}
 
-.carousel-item {
-  height: 57vh;
-}
-
-.carousel__img {
-  position: absolute;
-  height: 420px;
-  width: 1307px;
-  transform: translate3d(0px, 0px, 0px);
-  transform-origin: 0% 0% 0px;
-}
-
-.carousel-caption h5 {
-  font-style: italic;
-}
-
+/* Our services */
 .service {
   padding: 90px 0;
+  background-image: url(https://sunnyorchard.qodeinteractive.com/wp-content/uploads/2019/10/h1-background-2-2.jpg);
+  background-size: contain;
 }
 
 .service__container {
