@@ -2,6 +2,11 @@ from django.shortcuts import get_object_or_404
 from products.models import Product
 
 
+"""
+Code taken from Code Institute
+"""
+
+
 def cart_contents(request):
     """
     Makes the content of the cart available when rendering every page
@@ -24,7 +29,7 @@ def cart_contents(request):
             'total': quantity * product.price,
         })
 
-    if (cart_total >= 75 ):
+    if (cart_total >= 75):
         shipping_cost = 0
 
     return {

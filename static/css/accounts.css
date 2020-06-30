@@ -41,7 +41,11 @@
 }
 
 .here {
-    color:var(--color-icons); 
+    color: var(--color-icons); 
+}
+
+.here:hover {
+    color: var(--color-buttons-hover);
 }
 
 .account__img {

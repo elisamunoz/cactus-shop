@@ -15,10 +15,10 @@ def product_detail(request, pk):
     """ Creates a view that returns a single Products based on its ID or returns a 404 error if product doesn't exist
     """
     try:
-        product = get_object_or_404(Product, pk=pk )
+        product = get_object_or_404(Product, pk=pk)
         product.save()
         return render(request, "productdetail.html", {"product": product})
-    
+
     except Exception:
         return redirect('404')
 

@@ -20,4 +20,3 @@ urlpatterns = [
     url(r'^404/$', error_page, name='404'),
 
 ]
-

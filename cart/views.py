@@ -21,7 +21,7 @@ def update_cart(request):
 
         for key, value in request.POST.items():
             itemId = str(key)
-            
+
             if itemId in cart:
                 quantity = int(value)
 
@@ -44,7 +44,7 @@ def add_to_cart(request, id):
     """
     try:
         quantity = int(request.POST.get('quantity'))
-        cart = request.session.get('cart', {})   
+        cart = request.session.get('cart', {})
         product = get_object_or_404(Product, pk=id)
 
         if id in cart:
@@ -53,8 +53,9 @@ def add_to_cart(request, id):
             cart[id] = cart.get(id, quantity)
 
         request.session['cart'] = cart
-        messages.success(request, "You added " + product.name + " to your cart")
+        messages.success(request, "You added " +
+                         product.name + " to your cart")
         return redirect(reverse('products_list'))
-        
+
     except Exception:
         return redirect('404')

@@ -59,6 +59,16 @@
         width: 100%;
     }
 
+    /* Cart */
+    .cart__table__total {
+        margin-top: 65px;
+    }
+
+    /* Checkout */
+    .checkout__order {
+        margin-top: 65px;
+    }
+
     /* Error / Empty cart */
     .error-emptycart__txt {
         padding-top: 110px;

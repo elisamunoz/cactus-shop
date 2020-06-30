@@ -484,7 +484,7 @@ img {
   padding-left: 6px;
 }
 
-.field-qty {
+.input-group .form-control.field-qty {
   flex-grow: unset;
   width: 68px;
   border-radius: 4px;
@@ -500,6 +500,11 @@ img {
 .cart__table__total {
   width: 100%;
   margin-top: 40px;
+}
+
+.cart__table__total h2,
+.checkout__order h2 {
+  font-family: 'Playfair Display', serif;
 }
 
 .cart__table__total__data {
@@ -589,7 +594,7 @@ img {
 
 footer {
   height: 40px;
-  background: var(--color-main);
+  background: var(--color-sections);
 }
 
 .social-links {
