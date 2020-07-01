@@ -126,6 +126,16 @@ img {
   display: none;
 }
 
+.cart,
+.checkout,
+.about,
+.about__people,
+.some-products,
+.shop,
+.service {
+  padding: 50px 0;
+}
+
 /* Menu */
 .navbar__wrapper {
   background: var(--color-main);
@@ -267,9 +277,9 @@ img {
 
 /* Our services */
 .service {
-  padding: 90px 0;
   background-image: url("/static/images/service.jpg");
   background-size: contain;
+  padding: 90px 0;
 }
 
 .service__container {
@@ -299,9 +309,6 @@ img {
 
 
 /* About */
-.about {
-  padding: 90px 0;
-}
 
 .about__content {
   margin: auto;
@@ -327,7 +334,6 @@ img {
 
 .about__people {
   text-align: center;
-  padding: 90px 0;
   background: var(--color-sections);
 }
 
@@ -355,14 +361,6 @@ img {
 }
 
 /* Products */
-.some-products {
-  padding: 90px 0;
-}
-
-.shop { 
-  padding: 90px 0;
-}
-
 .product-description__content {
   display: flex;
   flex-direction: row;
@@ -547,10 +545,6 @@ img {
 }
 
 /* Checkout */
-
-.checkout {
-  padding: 90px 0;
-}
 
 .checkout__order {
   width: 100%;
