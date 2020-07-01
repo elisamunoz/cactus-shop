@@ -9,7 +9,7 @@ const hideErrors = () => {
 };
 
 $(() => {
-    $("#payment-form").submit(() => {
+    $("#payment-form").submit(function() {
         const btnSubmit = $("#submit_payment_btn");
 
         // Prevent double-click
@@ -23,26 +23,25 @@ $(() => {
             cvc: $("#id_cvv").val()
         };
 
-    Stripe.createToken(card, (status, response) => {
-        btnSubmit.attr("disabled", false);
+        Stripe.createToken(card, function(status, response) {
+            btnSubmit.attr("disabled", false);
 
-        if (status === 200) {
-            hideErrors();
-            $("#id_stripe_id").val(response.id);
+            if (status === 200) {
+                hideErrors();
+                $("#id_stripe_id").val(response.id);
 
-            // Prevent the credit card details from being submitted
-            // to our server
-            $("#id_credit_card_number").removeAttr('name');
-            $("#id_cvv").removeAttr('name');
-            $("#id_expiry_month").removeAttr('name');
-            $("#id_expiry_year").removeAttr('name');
+                // Prevent the credit card details from being submitted
+                // to our server
+                $("#id_credit_card_number").removeAttr('name');
+                $("#id_cvv").removeAttr('name');
+                $("#id_expiry_month").removeAttr('name');
+                $("#id_expiry_year").removeAttr('name');
 
-            form.submit();
-        } else {
-            showErrors(response.error.message);
-        }
-    });
-
-    return false;
+                form.submit();
+            } else {
+                showErrors(response.error.message);
+            }
+        });
+        return false;
     });
 });
