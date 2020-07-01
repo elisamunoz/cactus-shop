@@ -7,7 +7,7 @@ Catcus Shop is an eCommerce website dedicated to sell plants. This project is to
 
 My goal is to create a user-friendly, fully functional and appealing eCommerce. Before I started making this project I started watching several websites ideas, mainly from [Pinterest](https://www.pinterest.com/). Colours were chosen accordingly to the content used and the concept of colours in vegetation.
 
-![Home section](https://github.com/elisamunoz/cactus-shop/blob/master/static/images/mockups/multi-device-mockup.jpg)
+![Home section](https://github.com/elisamunoz/cactus-shop/blob/master/static/images/mockups/multi-device-mockup.jpeg)
 
 I used [Moqups](https://moqups.com/) to do the previous design of this project. [Here is the link for the mockups](https://github.com/elisamunoz/cactus-shop/tree/master/static/images/mockups).
 
