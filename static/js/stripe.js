@@ -35,7 +35,7 @@ $(function() {
         btnSubmit.attr("disabled", false);
 
         if (status === 200) {
-            hideError();
+            hideErrors();
             $("#id_stripe_id").val(response.id);
 
             // Prevent the credit card details from being submitted
