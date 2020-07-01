@@ -186,6 +186,7 @@ img {
 .catcus-logo {
   width: 50px;
   height: auto;
+  display: none;
 }
 
 .navbar-nav {
