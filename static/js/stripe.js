@@ -1,30 +1,22 @@
-// function submitForm() {
-
-// }
-
-// $(function(){
-//     $("#payment-form").submit(submitForm)
-// })
-
-function showErrors(message) {
+const showErrors = (message) => {
     const messageArea = $("#message-error");
     messageArea.text(message);
     messageArea.show();
 };
-function hideErrors() {
+const hideErrors = () => {
     const messageArea = $("#message-error");
     messageArea.hide();
 };
 
-$(function() {
-    $("#payment-form").submit(function() {
+$(() => {
+    $("#payment-form").submit(() => {
         const btnSubmit = $("#submit_payment_btn");
 
         // Prevent double-click
         btnSubmit.attr("disabled", true);
 
-        var form = this;
-        var card = {
+        const form = this;
+        const card = {
             number: $("#id_credit_card_number").val(),
             expMonth: $("#id_expiry_month").val(),
             expYear: $("#id_expiry_year").val(),
@@ -50,6 +42,7 @@ $(function() {
             showErrors(response.error.message);
         }
     });
+
     return false;
     });
 });
