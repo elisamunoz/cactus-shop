@@ -8,5 +8,6 @@ $(document).ready(function() {
 function fixedNavBar() {
     $(".navbar__wrapper").toggleClass(
         "navbar__wrapper--small",
-        $(this).scrollTop() > 200);
-    }
+        $(this).scrollTop() > 200
+    );
+};

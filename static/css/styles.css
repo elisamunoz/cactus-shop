@@ -213,6 +213,13 @@ img {
   margin: 0;
 }
 
+.message-error {
+  margin-top: 100px;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
 /* Home */
 .home {
   height: 70vh;
@@ -245,6 +252,10 @@ img {
   margin: auto;
   font-weight: 300;
   
+}
+
+.navbar-light .navbar-toggler {
+  border-color: var(--color-main);
 }
 
 .home__text__subtitle {
@@ -559,7 +570,7 @@ img {
 /* Error page - Empty cart */
 .error-emptycart {
   text-align: center;
-  min-height: calc(100vh - 135px);
+  min-height: calc(100vh - 130px);
   display: flex;
   flex-direction: row;
   align-items: stretch;
