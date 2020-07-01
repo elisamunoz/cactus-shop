@@ -9,6 +9,8 @@
   --color-table-line: #e8e8e8;
   --color-icons: #e06f51;
   --color-underline: #ffb293;
+
+  --transition-details: .6s ease-in-out;
 }
 
 *,
@@ -66,6 +68,7 @@ textarea {
 
 .site-content {
   min-height: calc(100vh - 135px);
+  padding-top: 90px;
 }
 
 img {
@@ -122,14 +125,30 @@ img {
 .hidden {
   display: none;
 }
-/* General colors */
-.about__people {
-  background: var(--color-sections);
-}
 
 /* Menu */
 .navbar__wrapper {
   background: var(--color-main);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+.navbar__wrapper * {
+  transition: all var(--transition-details);
+}
+
+.navbar__wrapper--small .navbar-brand {
+  font-size: 2.2em;
+}
+.navbar__wrapper--small .catcus-logo {
+  width: 47px;
+}
+
+.navbar__wrapper--small .navbar-nav {
+  font-size: 12px;
 }
 
 .navbar {
@@ -298,6 +317,7 @@ img {
 .about__people {
   text-align: center;
   padding: 90px 0;
+  background: var(--color-sections);
 }
 
 .about__people__subtitle {
