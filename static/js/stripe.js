@@ -23,7 +23,7 @@ $(() => {
             cvc: $("#id_cvv").val()
         };
 
-    Stripe.createToken(card, function(status, response) {
+    Stripe.createToken(card, (status, response) => {
         btnSubmit.attr("disabled", false);
 
         if (status === 200) {
