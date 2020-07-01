@@ -399,7 +399,7 @@ img {
 }
 
 .card__img {
-  background-image: url("https://cdn.pixabay.com/photo/2017/07/25/01/22/cat-2536662_960_720.jpg");
+  background-image: url("/static/images/default.png");
   background-size: cover;
   background-position: center;
   margin: auto;
@@ -464,7 +464,7 @@ img {
 .product__detail__img {
   height: 400px;
   width: 100%;
-  background-image: url("https://cdn.pixabay.com/photo/2017/07/25/01/22/cat-2536662_960_720.jpg");
+  background-image: url("/static/images/default.png");
   background-size: cover;
   background-position: center;
   margin: auto;
