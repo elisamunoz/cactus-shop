@@ -7,11 +7,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="description" content="Plants"/>
+    <meta name="description" content="At Catcus online plant store, we have something for everyone, whether you are a beginner who wants to start out with a few small pots and trays on your windowsill, the 'green fingered' expert or professional landscape gardener, we have the tools for you"/>
     <meta name="author" content="Elisa Munoz" />
     <title>Catcus</title>
+    <link rel="icon"  type="image/ico" href="{% static 'images/cactus.ico' %}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@400;500&family=Playfair+Display:wght@400;500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap">
     
     <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
@@ -23,8 +24,8 @@
     <link rel="stylesheet" href="/static/css/styles.css">
     <link rel="stylesheet" href="/static/css/accounts.css">
     <link rel="stylesheet" href="/static/css/tablet.css">
-    <link rel="stylesheet" href="/static/css/desktop.css">
-   -->
+    <link rel="stylesheet" href="/static/css/desktop.css"> -->
+  
   </head>
   <body>
     <!-- Header -->
@@ -55,8 +56,6 @@
             <a class="nav-item nav-link underline" href="{% url 'about' %}">About</a>
             <a class="nav-item nav-link underline" href="{% url 'products_list' %}">Shop</a>
             {% if user.is_authenticated %}
-              <!-- <a class="nav-item nav-link" href="#">Hello {{ user }}</a>
-              <a class="nav-item nav-link" href="{% url 'accounts:profile' %}">Profile</a> -->
               <a class="nav-item nav-link underline" href="{% url 'accounts:logout' %}">Logout</a>
             {% else %}
               <a class="nav-item nav-link underline" href="{% url 'accounts:signin' %}">Sign in</a>
@@ -76,7 +75,7 @@
     <!-- This message renders when it comes from the backend -->
     {% if messages %}
       {% for message in messages %}
-          <div class="alert alert-success alert-dismissible fade show {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %} alert-danger {% endif %}" role="alert">
+          <div class="alert alert-success alert-dismissible fade show {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %} alert-danger {% endif %} message-error" role="alert">
             <div class="container">{{ message }}</div>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true">&times;</span>
@@ -86,7 +85,7 @@
     {% endif %}
     
     <!-- Message to be used with Javascript functions -->
-    <div class="alert alert-danger alert-dismissible fade show hidden" role="alert" id="message-error">
+    <div id="message-error" class="alert alert-danger alert-dismissible fade show hidden message-error" role="alert">
       <div class="container"></div>
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
@@ -126,6 +125,8 @@
     <script src="https://kit.fontawesome.com/68fe0b31dc.js" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <script src="{% static 'js/script.js' %}"></script>
+    <!-- <script src="/static/js/script.js"></script> -->
+
     {% block head_js %}
     {% endblock head_js %}
     <!--/Scripts-->

@@ -1,14 +1,15 @@
 from django.db import models
 from products.models import Product
 
+
 class Order(models.Model):
     full_name = models.CharField(max_length=50, blank=False)
     email_address = models.CharField(max_length=50, blank=False)
     phone_number = models.CharField(max_length=12, blank=False)
     address = models.CharField(max_length=50, blank=False)
     city_town = models.CharField(max_length=50, blank=False)
-    country = models.CharField(max_length= 40, blank=False)
-    postcode = models.CharField(max_length= 10, blank=True)
+    country = models.CharField(max_length=40, blank=False)
+    postcode = models.CharField(max_length=10, blank=True)
     date = models.DateField()
 
     def __str__(self):

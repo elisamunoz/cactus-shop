@@ -19,6 +19,7 @@ I used [Moqups](https://moqups.com/) to do the previous design of this project. 
 - A website were I can shop plants to make my collection bigger and bigger
 - A website were I can see trendy plants because I like to get what somebody else are getting 
 - An online shop where I can get plants delivered in Ireland
+- An online shop where I can get free shipping after buying a certain amount of money to save after buying plants
 - An online shop were I can securely pay for my products and feel safe after paying online
 - An online shop were apart from buying I also can learn something useful about the plants I am buying
 
@@ -72,12 +73,14 @@ This section will show the latest 4 - 8 plants the shop owner uploads to the dat
 - Login required for certain tasks 
 - Shopping cart creation and ability to update quantity of products wanted
 - Credit/Debit card authentication to pay for products
-- Error message when trying to get to a non-existent product
+- Error message when trying to get to a non-existent product or any invalid url
 - "Your cart is currently empty" message when trying to open an empty shopping cart
 - A default image is place when the shop owner uploads a product without an image
-- Transparent to Solid navbar
-- Smoothie scroll to a specific element
-- Parallax effect
+- Cart and checkout tables show free shipping when purchase is higher than €75
+- Transparent to solid-fixed navbar
+- Used CSS variables to set colors to make it easier to change color themes in the future if needed
+
+
 
 ## Feature I would like to implement:
 - I created the url "/products/create" that can only be accessed by a super user, on this first version the super user can only create a new product using it. The super user can still upload, edit and delete products using the Django built-in admin panel. In a next version I would like to create the edit and delete functionality on the url.
