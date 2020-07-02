@@ -132,7 +132,8 @@ img {
 .about__people,
 .some-products,
 .shop,
-.service {
+.service,
+.profile {
   padding: 50px 0;
 }
 
@@ -229,6 +230,10 @@ img {
   position: absolute;
   left: 0;
   right: 0;
+}
+
+.capitalize {
+  text-transform: capitalize;
 }
 
 /* Home */
@@ -488,12 +493,12 @@ img {
 
 .quantity-form {
   display: inline-block;
-  width: 58%;
+  width: 50%;
 }
 
 .product__detail__form__button {
   padding: 19px 18px;
-  width: 40%;
+  width: 48%;
 }
 
 /* Cart */
@@ -518,12 +523,12 @@ img {
   flex-grow: unset;
   width: 68px;
   border-radius: 4px;
-  margin: 0 0 -15px;
+  margin: 0 0 -2px;
 }
 
 .cart__update__button,
 .cart__table__checkout {
-  margin-top: 15px;
+  margin-top: 25px;
   margin-bottom: 15px;
 }
 
@@ -558,6 +563,21 @@ img {
 .submit_payment_btn {
   margin: 0;
   margin-top: 25px;
+}
+
+/* Profile */
+
+.profile {
+  min-height: calc(100vh - 130px);
+}
+
+.profile__order {
+  margin-top: 0;
+}
+
+.profile__section__subtitle,
+.profile__checkout__button {
+  text-align: center;
 }
 
 

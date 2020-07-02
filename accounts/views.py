@@ -3,6 +3,7 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login, logout
 from django.contrib import messages, auth
 from django.contrib.auth.decorators import login_required
+from products.models import Product
 
 
 def signup_view(request):
@@ -51,4 +52,5 @@ def logout_view(request):
 @login_required
 def profile_view(request):
     """ View that displays the profile page of a logged in user"""
+    
     return render(request, 'profile.html')

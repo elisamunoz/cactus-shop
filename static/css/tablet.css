@@ -28,6 +28,11 @@
         margin: 25px 50px;
     }
 
+    /* Profile */
+    .profile__table {
+        width: 50%;
+      }
+
     /* Product detail url */
     .product__detail__img {
         height: 600px;
@@ -61,5 +66,15 @@
     /* Error url */
     .error-emptycart__txt {
         padding-top: 160px;
+    }
+
+    /* Profile */
+    .profile__order {
+        margin-top: 0;
+    }
+
+    .profile__section__subtitle,
+    .profile__checkout__button {
+        text-align: left;
     }
 }

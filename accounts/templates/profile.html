@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+    {% if product_count == 0 %}
+    <div class="error-emptycart">
+        <div class="container error-emptycart__content_wrapper">
+            <div class="error-emptycart__content_wrapper2">
+                <h3 class="section__subtitle error-emptycart__subtitle">Hello <span class="capitalize">{{ user }},</span>
+                    <br> your  cart is currently empty</h3>
+                <div class="error-emptycart__button">
+                    <a class="button" href="{% url 'products_list' %}">Return to Shop</a>
+                </div>
+                <div class="error-emptycart__button__image"></div>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <section class="profile">
+    <div class="container checkout__order profile__order">
+        <h1 class="section__title">Hello <span class="capitalize">{{user}}</span>!</h1>
+        <h2 class="section__subtitle profile__section__subtitle">This is your order:</h2>
+            <table class="checkout__table">
+                <!-- Categories in shopping cart -->
+                <tr>
+                    <th>Product</th>
+                    <th>Total</th>
+                </tr>
+                <!-- Detail of products in shopping cart -->
+                {% for item in cart_items %}
+                    <tr>
+                        <td>{{ item.product.name }} x {{item.quantity}}</td>
+                        <td>€{{ item.total }}</td>
+                    </tr>
+                {% endfor %}
+                <tr>
+                    <td><strong>Sub-Total</strong></td>
+                    <td>€{{ sub_total }}</td>
+                </tr>
+                <tr>
+                    <td><strong>Shipping</strong></td>
+                    <td>€{{ shipping }}</td>
+                </tr>
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td>€{{ total }}</td>
+                </tr>
+            </table>
+            <div class="cart__table__checkout profile__checkout__button">
+                <a href="{% url 'checkout' %}" class="button" role="button">Proceed to Checkout</a>
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+{% endblock %}
