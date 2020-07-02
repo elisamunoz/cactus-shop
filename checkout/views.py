@@ -52,6 +52,9 @@ def checkout(request):
             except stripe.error.CardError:
                 messages.error(request, "Your card has been declined")
                 return redirect('cart')
+            except Exception:
+                messages.error(request, "An error ocurred. Payment didn't go through")
+                return redirect('cart')
 
             if customer.paid:
                 messages.success(request, "You have successfully paid")
@@ -62,7 +65,6 @@ def checkout(request):
                 return redirect('cart')
 
         else:
-            # print(payment_form.errors)
             messages.error(
                 request, "We were unable to take a payment with that cart")
             return redirect('cart')

@@ -23,7 +23,7 @@ I used [Moqups](https://moqups.com/) to do the previous design of this project. 
 - An online shop were I can securely pay for my products and feel safe after paying online
 - An online shop were apart from buying I also can learn something useful about the plants I am buying
 
-#### “As a shop owner I need”#
+#### “As a shop owner I need”
 
 - An appealing website to catch customers from the eye
 - A website were I can upload products and update prices so I don't need to know any code

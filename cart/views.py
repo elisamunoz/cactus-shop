@@ -30,6 +30,7 @@ def update_cart(request):
                 else:
                     cart.pop(itemId)
 
+        # The UI cart replaces the one in the session
         request.session['cart'] = cart
         return redirect(reverse('cart'))
 
