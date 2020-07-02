@@ -113,10 +113,15 @@ After installing these you need to:
 3. Create a `.env` file containing the following credentials:
 
 `os.environ["SECRET_KEY"] = "SECRET_KEY"`
+
 `os.environ["STRIPE_PUBLISHABLE"] = "STRIPE_PUBLISHABLE"`
+
 `os.environ["STRIPE_SECRET"] = "STRIPE_SECRET"`
+
 `os.environ["DATABASE_URL"] = "DATABASE_URL"`
+
 `os.environ["AWS_ACCESS_KEY_ID"] = "AWS_ACCESS_KEY_ID"`
+
 `os.environ["AWS_SECRET_ACCESS_KEY"] = "AWS_SECRET_ACCESS_KEY"`
 
 4. Install the required modules using this command:
