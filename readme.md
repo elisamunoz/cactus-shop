@@ -88,6 +88,7 @@ This section will show the latest 4 - 8 plants the shop owner uploads to the dat
 
 ## Testing
 - Google Developer Tool: I used this tool to check every change I made on the code to check functionality and responsivenes in diferent device sizes
+- I clicked every button and I filled every form several time to make sure I did not break anything after fixing some other problem I was having
 - [W3C Markup Validation Service](https://validator.w3.org/): I validated the HTML code using this validator. W3C Markup Validator does not recognize Django code as valid so I got errors pointing at them, 
 - [CSS Validation Service](https://jigsaw.w3.org/css-validator/): I validated the CSS code using this validator.
 - I used TestCase to test the Product app, to run it, it is necessary to run the following command in the terminal:
@@ -110,13 +111,13 @@ After installing these you need to:
 1. Download this repository clicking in ‘Clone or Dowload’ on top of this page, then click on ‘Download ZIP’ and extract the files in the folder you will be working on.
 2. Open the folder where you download the repository in your code editor
 3. Create a `.env` file containing the following credentials:
-`
-os.environ["SECRET_KEY"] = "SECRET_KEY"
-os.environ["STRIPE_PUBLISHABLE"] = "STRIPE_PUBLISHABLE"
-os.environ["STRIPE_SECRET"] = "STRIPE_SECRET"
-os.environ["DATABASE_URL"] = "DATABASE_URL"
-os.environ["AWS_ACCESS_KEY_ID"] = "AWS_ACCESS_KEY_ID"
-os.environ["AWS_SECRET_ACCESS_KEY"] = "AWS_SECRET_ACCESS_KEY"`
+
+`os.environ["SECRET_KEY"] = "SECRET_KEY"`
+`os.environ["STRIPE_PUBLISHABLE"] = "STRIPE_PUBLISHABLE"`
+`os.environ["STRIPE_SECRET"] = "STRIPE_SECRET"`
+`os.environ["DATABASE_URL"] = "DATABASE_URL"`
+`os.environ["AWS_ACCESS_KEY_ID"] = "AWS_ACCESS_KEY_ID"`
+`os.environ["AWS_SECRET_ACCESS_KEY"] = "AWS_SECRET_ACCESS_KEY"`
 
 4. Install the required modules using this command:
 `pip -r requirements.txt`
