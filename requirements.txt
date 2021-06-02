@@ -49,7 +49,7 @@ sentinels==1.0.0
 six==1.14.0
 stripe==2.46.0
 typing-extensions==3.7.4.1
-urllib3==1.25.9
+urllib3==1.26.5
 Werkzeug==0.16.0
 whitenoise==5.0.1
 wrapt==1.11.2
